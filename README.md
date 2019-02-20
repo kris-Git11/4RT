@@ -1,2 +1,2 @@
 # 4RT-klase-1
-Decki bok
+skrrrra prapapa getiget wit di niggah gettin it skraa prapapapapaa
