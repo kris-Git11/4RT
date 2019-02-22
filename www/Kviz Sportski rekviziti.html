@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)https://www.artrea.com.hr/qiuz/kvizlopte.htm -->
+<html><script type="text/javascript" charset="utf-8" id="zm-extension" src="chrome-extension://fdcgdnkidjaadafnichfpabhfomcebme/scripts/webrtc-patch.js" async=""></script><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<title>Kviz Sportski rekviziti</title>
+
+<meta name="description" content="Sportski rekviziti - kviz za najmlađe">
+<meta name="keywords" content="kviz,test,sport,interaktivne,edukativne igre,igra pamćenja,puzzle,memory,slagalica,igre za djecu">
+<meta name="revisit-after" content="15 days">
+<meta name="robots" content="index, follow">
+<meta name="author" content="artrea.com.hr">
+<style type="text/css">
+<!--
+.bgclr {background-color: white; color: black; font-weight: bold;}
+h3           { font-family: Verdana; font-size: 10pt; margin-top:5; margin-bottom:0 }
+		h4{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0;} 
+-->
+</style>
+<script language="JavaScript">
+<!-- Begin
+// Broj pitanja
+var numQues = 10;
+
+// Broj odgovora po pitanju
+var numChoi = 4;
+
+// Broj pitanja koji se pokazuju
+var answers = new Array(10);
+
+// Odgovori na pitanja
+answers[0] = "B";
+answers[1] = "D";
+answers[2] = "A";
+answers[3] = "C";
+answers[4] = "B";
+answers[5] = "C";
+answers[6] = "D";
+answers[7] = "A";
+answers[8] = "B";
+answers[9] = "D";
+
+// Do not change anything below here ...
+function getScore(form) {
+  var score = 0;
+  var currElt;
+  var currSelection;
+  for (i=0; i<numQues; i++) {
+    currElt = i*numChoi;
+    for (j=0; j<numChoi; j++) {
+      currSelection = form.elements[currElt + j];
+      if (currSelection.checked) {
+        if (currSelection.value == answers[i]) {
+          score++;
+          break;
+        }
+      }
+    }
+  }
+  //score = Math.round(score/numQues*100);
+  form.percentage.value = score + " od " + numQues;
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+}
+//  End -->
+</script>
+</head>
+
+<body>
+<div align="center">
+	<table border="0" width="600" id="table1" cellspacing="0" cellpadding="2" bgcolor="#D9EAFF">
+		<tbody><tr>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+			<div align="center">
+				<table border="0" width="80%" id="table2" cellspacing="0" cellpadding="4" bgcolor="#B0D3FF">
+					<tbody><tr>
+						<td>
+						<p align="center"><b><font face="Verdana" size="5">
+						Sportski rekviziti 
+						(5-8)</font></b></p></td>
+					</tr>
+				</tbody></table>
+			</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p align="center"><b><font face="Verdana" size="2">Pronađi na 
+			slici...</font></b></p></td>
+		</tr>
+		<tr>
+			<td>
+<form name="quiz">
+<h3><font face="Verdana" size="2">1. </font>
+<b><font face="Verdana" size="2" color="#000080">Košarkaška lopta ...</font></b></h3>
+<div align="center">
+	<table border="0" width="100%" id="table3" cellspacing="0" cellpadding="2">
+		<tbody><tr>
+			<td>
+			<p align="center"><img border="0" src="./Kviz Sportski rekviziti_files/nogomet.jpg" width="80" height="80"></p></td>
+			<td><p align="center"> 
+			<img border="0" src="./Kviz Sportski rekviziti_files/kosarka.jpg" width="80" height="80"></p></td>
+			<td><p align="center">
+	<img border="0" src="./Kviz Sportski rekviziti_files/ragbi.jpg" width="80" height="80"></p></td>
+			<td><p align="center">
+	<img border="0" src="./Kviz Sportski rekviziti_files/odbojka.jpg" width="80" height="80"></p></td>
+		</tr>
+		<tr>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q1" value="A"></font><font face="Verdana" size="2">A</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q1" value="B"></font><font face="Verdana" size="2">B</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q1" value="C"></font><font face="Verdana" size="2">C</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q1" value="D"></font><font face="Verdana" size="2">D</font></td>
+		</tr>
+	</tbody></table>
+	<hr>
+	<h3 align="left">2.
+<b><font face="Verdana" size="2" color="#000080">Nogometna lopta ...</font></b></h3>
+	<div align="center">
+	<table border="0" width="100%" id="table4" cellspacing="0" cellpadding="2">
+		<tbody><tr>
+			<td>
+			<p align="center"><img border="0" src="./Kviz Sportski rekviziti_files/rukomet.jpg" width="80" height="80"></p></td>
+			<td><p align="center"> 
+			<img border="0" src="./Kviz Sportski rekviziti_files/tenis.jpg" width="80" height="80"></p></td>
+			<td><p align="center">
+	<img border="0" src="./Kviz Sportski rekviziti_files/bejzbol.jpg" width="80" height="80"></p></td>
+			<td><p align="center"><img border="0" src="./Kviz Sportski rekviziti_files/nogomet.jpg" width="80" height="80"></p></td>
+		</tr>
+		<tr>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q2" value="A"></font><font face="Verdana" size="2">A</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q2" value="B"></font><font face="Verdana" size="2">B</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q2" value="C"></font><font face="Verdana" size="2">C</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q2" value="D"></font><font face="Verdana" size="2">D</font></td>
+		</tr>
+	</tbody></table>
+	<hr>
+</div>
+</div>
+<h3><font face="Verdana" size="2">3. </font>
+<b><font face="Verdana" size="2" color="#000080">Rukometna lopta ...</font></b></h3>
+<div align="center">
+	<table border="0" width="100%" id="table5" cellspacing="0" cellpadding="2">
+		<tbody><tr>
+			<td>
+			<p align="center"><img border="0" src="./Kviz Sportski rekviziti_files/rukomet.jpg" width="80" height="80"></p></td>
+			<td><p align="center"> 
+	<img border="0" src="./Kviz Sportski rekviziti_files/ragbi.jpg" width="80" height="80"></p></td>
+			<td><p align="center">
+	<img border="0" src="./Kviz Sportski rekviziti_files/golf.jpg" width="80" height="80"></p></td>
+			<td><p align="center"><img border="0" src="./Kviz Sportski rekviziti_files/badminton.jpg" width="80" height="80"></p></td>
+		</tr>
+		<tr>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q3" value="A"></font><font face="Verdana" size="2">A</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q3" value="B"></font><font face="Verdana" size="2">B</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q3" value="C"></font><font face="Verdana" size="2">C</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q3" value="D"></font><font face="Verdana" size="2">D</font></td>
+		</tr>
+	</tbody></table>
+	<hr>
+</div>
+<h3><font face="Verdana" size="2">4. </font>
+<b><font face="Verdana" size="2" color="#000080">Odbojkaška lopta ...</font></b></h3>
+<div align="center">
+	<table border="0" width="100%" id="table6" cellspacing="0" cellpadding="2">
+		<tbody><tr>
+			<td>
+			<p align="center">
+	<img border="0" src="./Kviz Sportski rekviziti_files/ragbi.jpg" width="80" height="80"></p></td>
+			<td><p align="center"> 
+			<img border="0" src="./Kviz Sportski rekviziti_files/nogomet.jpg" width="80" height="80"></p></td>
+			<td><p align="center">
+	<img border="0" src="./Kviz Sportski rekviziti_files/odbojka.jpg" width="80" height="80"></p></td>
+			<td><p align="center"><img border="0" src="./Kviz Sportski rekviziti_files/kosarka.jpg" width="80" height="80"></p></td>
+		</tr>
+		<tr>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q4" value="A"></font><font face="Verdana" size="2">A</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q4" value="B"></font><font face="Verdana" size="2">B</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q4" value="C"></font><font face="Verdana" size="2">C</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q4" value="D"></font><font face="Verdana" size="2">D</font></td>
+		</tr>
+	</tbody></table>
+	<hr>
+</div>
+<h3><font face="Verdana" size="2">5. </font>
+<b><font face="Verdana" size="2" color="#000080">Lopta za ragbi ...</font></b></h3>
+<div align="center">
+	<table border="0" width="100%" id="table7" cellspacing="0" cellpadding="2">
+		<tbody><tr>
+			<td>
+			<p align="center"><img border="0" src="./Kviz Sportski rekviziti_files/rukomet.jpg" width="80" height="80"></p></td>
+			<td><p align="center"> 
+			<img border="0" src="./Kviz Sportski rekviziti_files/ragbi.jpg" width="80" height="80"></p></td>
+			<td><p align="center">
+	<img border="0" src="./Kviz Sportski rekviziti_files/bejzbol.jpg" width="80" height="80"></p></td>
+			<td><p align="center"><img border="0" src="./Kviz Sportski rekviziti_files/hokej.jpg" width="80" height="80"></p></td>
+		</tr>
+		<tr>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q5" value="A"></font><font face="Verdana" size="2">A</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q5" value="B"></font><font face="Verdana" size="2">B</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q5" value="C"></font><font face="Verdana" size="2">C</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q5" value="D"></font><font face="Verdana" size="2">D</font></td>
+		</tr>
+	</tbody></table>
+	<hr>
+</div>
+<h3><font face="Verdana" size="2">6. </font>
+<b><font face="Verdana" size="2" color="#000080">Lopta za bejzbol ...</font></b></h3>
+<div align="center">
+	<table border="0" width="100%" id="table8" cellspacing="0" cellpadding="2">
+		<tbody><tr>
+			<td>
+			<p align="center"><img border="0" src="./Kviz Sportski rekviziti_files/nogomet.jpg" width="80" height="80"></p></td>
+			<td><p align="center"> 
+			<img border="0" src="./Kviz Sportski rekviziti_files/ragbi.jpg" width="80" height="80"></p></td>
+			<td><p align="center">
+	<img border="0" src="./Kviz Sportski rekviziti_files/bejzbol.jpg" width="80" height="80"></p></td>
+			<td><p align="center"><img border="0" src="./Kviz Sportski rekviziti_files/odbojka.jpg" width="80" height="80"></p></td>
+		</tr>
+		<tr>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q6" value="A"></font><font face="Verdana" size="2">A</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q6" value="B"></font><font face="Verdana" size="2">B</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q6" value="C"></font><font face="Verdana" size="2">C</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q6" value="D"></font><font face="Verdana" size="2">D</font></td>
+		</tr>
+	</tbody></table>
+	<hr>
+</div>
+<h3><font face="Verdana" size="2">7. </font>
+<b><font face="Verdana" size="2" color="#000080">Loptica za tenis ...</font></b></h3>
+<div align="center">
+	<table border="0" width="100%" id="table9" cellspacing="0" cellpadding="2">
+		<tbody><tr>
+			<td>
+			<p align="center"><img border="0" src="./Kviz Sportski rekviziti_files/rukomet.jpg" width="80" height="80"></p></td>
+			<td><p align="center"> 
+	<img border="0" src="./Kviz Sportski rekviziti_files/golf.jpg" width="80" height="80"></p></td>
+			<td><p align="center">
+			<img border="0" src="./Kviz Sportski rekviziti_files/badminton.jpg" width="80" height="80"></p></td>
+			<td><p align="center"><img border="0" src="./Kviz Sportski rekviziti_files/tenis.jpg" width="80" height="80"></p></td>
+		</tr>
+		<tr>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q7" value="A"></font><font face="Verdana" size="2">A</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q7" value="B"></font><font face="Verdana" size="2">B</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q7" value="C"></font><font face="Verdana" size="2">C</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q7" value="D"></font><font face="Verdana" size="2">D</font></td>
+		</tr>
+	</tbody></table>
+	<hr>
+</div>
+<h3><font face="Verdana" size="2">8. </font>
+<b><font face="Verdana" size="2" color="#000080">Loptica za golf ...</font></b></h3>
+<div align="center">
+	<table border="0" width="100%" id="table10" cellspacing="0" cellpadding="2">
+		<tbody><tr>
+			<td width="25%">
+			<p align="center">
+	<img border="0" src="./Kviz Sportski rekviziti_files/golf.jpg" width="80" height="80"></p></td>
+			<td width="25%"><p align="center"> 
+			<img border="0" src="./Kviz Sportski rekviziti_files/tenis.jpg" width="80" height="80"></p></td>
+			<td width="25%"><p align="center">
+	<img border="0" src="./Kviz Sportski rekviziti_files/kosarka.jpg" width="80" height="80"></p></td>
+			<td width="25%"><p align="center">
+	<img border="0" src="./Kviz Sportski rekviziti_files/badminton.jpg" width="80" height="80"></p></td>
+		</tr>
+		<tr>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q8" value="A"></font><font face="Verdana" size="2">A</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q8" value="B"></font><font face="Verdana" size="2">B</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q8" value="C"></font><font face="Verdana" size="2">C</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q8" value="D"></font><font face="Verdana" size="2">D</font></td>
+		</tr>
+	</tbody></table>
+	<hr>
+</div>
+<h3><font face="Verdana" size="2">9. </font>
+<b><font face="Verdana" size="2" color="#000080">Loptica za badminton ...</font></b></h3>
+<div align="center">
+	<table border="0" width="100%" id="table11" cellspacing="0" cellpadding="2">
+		<tbody><tr>
+			<td>
+			<p align="center">
+	<img border="0" src="./Kviz Sportski rekviziti_files/bejzbol.jpg" width="80" height="80"></p></td>
+			<td><p align="center"> 
+	<img border="0" src="./Kviz Sportski rekviziti_files/badminton.jpg" width="80" height="80"></p></td>
+			<td><p align="center">
+	<img border="0" src="./Kviz Sportski rekviziti_files/tenis.jpg" width="80" height="80"></p></td>
+			<td><p align="center">
+	<img border="0" src="./Kviz Sportski rekviziti_files/golf.jpg" width="80" height="80"></p></td>
+		</tr>
+		<tr>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q9" value="A"></font><font face="Verdana" size="2">A</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q9" value="B"></font><font face="Verdana" size="2">B</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q9" value="C"></font><font face="Verdana" size="2">C</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q9" value="D"></font><font face="Verdana" size="2">D</font></td>
+		</tr>
+	</tbody></table>
+	<hr>
+</div>
+<h3><font face="Verdana" size="2">10. </font>
+<font face="Verdana" size="2" color="#000080"><b>Koji rekvizit pripada sportu 
+zvanom hokej?&nbsp;&nbsp;</b></font></h3>
+<div align="center">
+	<table border="0" width="100%" id="table12" cellspacing="0" cellpadding="2">
+		<tbody><tr>
+			<td>
+			<p align="center"><img border="0" src="./Kviz Sportski rekviziti_files/ragbi.jpg" width="80" height="80"></p></td>
+			<td><p align="center"> 
+			<img border="0" src="./Kviz Sportski rekviziti_files/golf.jpg" width="80" height="80"></p></td>
+			<td><p align="center">
+	<img border="0" src="./Kviz Sportski rekviziti_files/badminton.jpg" width="80" height="80"></p></td>
+			<td><p align="center"><img border="0" src="./Kviz Sportski rekviziti_files/hokej.jpg" width="80" height="80"></p></td>
+		</tr>
+		<tr>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q10" value="A"></font><font face="Verdana" size="2">A</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q10" value="B"></font><font face="Verdana" size="2">B</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q10" value="C"></font><font face="Verdana" size="2">C</font></td>
+			<td align="center"><font face="Verdana">
+			<input type="radio" name="q10" value="D"></font><font face="Verdana" size="2">D</font></td>
+		</tr>
+	</tbody></table>
+</div>
+<div align="center">
+	<hr>
+</div>
+
+<input type="button" value="Pokaži rezultate" onclick="getScore(this.form)">
+<input type="reset" value="Izbriši odgovore">
+<p> Rezultat = <strong>
+<input class="bgclr" type="text" size="30" name="percentage" disabled=""></strong><br>&nbsp;</p><p> 
+</p><p> <br>
+Točni odgovori:<br>
+<textarea class="bgclr" name="solutions" wrap="virtual" rows="10" cols="25" disabled=""></textarea>
+</p></form>
+		
+			</td>
+		</tr>
+	</tbody></table>
+	<p>&nbsp;</p>
+<div align="center" style="font-size: 100%; font-style: normal; font-variant: normal; font-weight: normal; vertical-align: baseline; border: 0 none; margin: 0; padding: 0">
+    <table border="0" width="600" id="table15" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+        <td>
+          <h4 align="center"><font size="2">
+			<i style="font-size: 100%; font-style: normal; font-variant: normal; font-weight: normal; vertical-align: baseline; border: 0 none; margin: 0; padding: 0">
+			<a href="index.html"><font color="#000080">
+			<b style="font-size: 100%; font-style: normal; font-variant: normal; font-weight: normal; vertical-align: baseline; border: 0 none; margin: 0; padding: 0">Povratak
+          na početnu stranicu</b></font></a></i></font></h4>
+		</td>
+      </tr>
+      <tr>
+        <td>
+          &nbsp;</td>
+      </tr>
+      <tr>
+        <td>
+          <p align="center">
+<script async="" src="./Kviz Sportski rekviziti_files/f.txt"></script>
+<!-- Artrea srednji horiz dolje 468x60 -->
+
+          </p></td>
+      </tr>
+      <tr>
+        <td>
+          &nbsp;</td>
+      </tr>
+      <tr>
+        <td>
+          <p align="center"><font face="Verdana" size="1">Copyright 2019 <a href="mailto:artrea@artrea.com.hr"> Leon Jeđut</a>
+       </font></p></td>
+      </tr>
+    </tbody></table>
+    </div>
+</div>
+<p>
+
+
+</p></body></html>
