@@ -1,4 +1,4 @@
-# 4RT-klase-1
+# 4RT
 
 Repozitorij za radove:
 
