@@ -1,0 +1,158 @@
+const d = document
+let mouseCursor = d.getElementById('mouse-cursor')
+let cursorText = d.getElementById('text-cursor')
+var tl = new TimelineMax({repeat:-1});
+tl.to('#power-button',1,{
+    fill:"#32c3d1"
+})
+.to("#screen-blank-layer", 1, {
+    opacity:"0",
+})
+.to(mouseCursor, .5, {
+    x:"40px", 
+    y:"-100px"
+})
+.to(mouseCursor,.6,{
+    x:"20px",
+    y:"-175px"
+})
+.to(cursorText,.5,{
+    display:"block"
+})
+.to(cursorText,.1,{
+    x:"30px"
+})
+.to("#letter-m",.1,{
+    display:"block"
+})
+.to(cursorText,.1,{
+    x:"50px"
+})
+.to("#letter-a",.1,{
+    display:"block"
+})
+.to(cursorText,.1,{
+    x:"70px"
+})
+.to("#letter-g",.1,{
+    display:"block"
+})
+.to(cursorText,.1,{
+    x:"90px"
+})
+.to("#letter-i",.1,{
+    display:"block"
+})
+.to(cursorText,.1,{
+    x:"105px",
+    display:"none"
+})
+.to("#letter-c",.1,{
+    display:"block"
+})
+.to(mouseCursor,1,{
+    y:"40px",
+    x:"280px"
+})
+.to('#screen-button',1,{
+    fill:"#32d196"
+},"-=.5")
+.to("#word-send",1,{
+    opacity:"1"
+},"-=.8")
+.to(mouseCursor,.3,{
+    scale:.85
+})
+.to('#screen-button',.3,{
+    scale:.95
+},"-=.3")
+.to("#word-send",.3,{
+    scale:.95
+},"-=.3")
+.to(mouseCursor,.3,{
+    scale:1
+})
+.to('#screen-button',.3,{
+    scale:1
+},"-=.3")
+.to("#word-send",.3,{
+    scale:1
+},"-=.3")
+.to("#client-monitor",1.5,{
+    scale:.45,
+},"-=2.5")
+.to("#client-computer",.8,{
+    opacity:1,
+    y:-250
+},"-=1")
+.to("#server-bottom,#server-middle,#server-top",0,{
+    y:-100,
+    x:-50
+})
+.to("#server-bottom",.5,{
+    opacity:1,
+    x:-100,
+    y:0,
+    scale:1.2
+})
+.to("#server-middle",.5,{
+    opacity:1,
+    x:-100,
+    y:0,
+    scale:1.2
+})
+.to("#server-top",.5,{
+    opacity:1,
+    x:-100,
+    y:0,
+    scale:1.2
+})
+.to("#server-bottom",.3,{
+    opacity:1,
+   
+    scale:1.5
+})
+.to("#server-middle",.3,{
+    opacity:1,
+    x:-100,
+    y:0,
+    scale:1.5
+},"-=.2")
+.to("#server-top",.3,{
+    opacity:1,
+    x:-100,
+    y:0,
+    scale:1.5
+},"-=.2")
+.to("#server-bottom",.3,{
+    opacity:1,
+    scale:1.2
+},"-=.2")
+.to("#server-middle",.3,{
+    opacity:1,
+    scale:1.2
+},"-=.2")
+.to("#server-top",.3,{
+    opacity:1,
+    scale:1.2
+},"-=.2")
+
+
+let thePipes = "#p1,#p2,#p3,#p4,#p5,#p6,#p7,#p8,#p9,#p10,#p11,#p12,#p13,#p14,#p15,#p16,#p17,#p18,#p19,#p20,#p21,#p22,#p23"
+tl.to(thePipes,0,{
+    fill:"#26FF5C"
+})
+tl.staggerTo(thePipes,1,{
+    opacity:1,
+    cycle:{
+        fill:["#8DFFBE","#8DFFBE","#26FF5C"]
+    },
+   repeat:5,
+},0.05)
+tl.staggerTo(".s1bot,.s1mid,.s1top,.s2bot,.s2mid,.s2top,.s3bot,.s3mid,.s3top",.8,{
+    cycle:{
+        fill:["#8DFFBE","#FF0552","#248BFF"],
+        scale:[1,1.5,1],
+    },
+    repeat:5,
+},.05,"-=5.5")
