@@ -1,0 +1,103 @@
+// Colors
+@grey: #DDD;
+@gold: #E3E2CC;
+@brown: #636359;
+
+// Transition
+@transition-easing: cubic-bezier(0.465, 0.183, 0.153, 0.946);
+@transition-duration: 300ms;
+@transition-delay: @transition-duration;
+
+// Keyframes
+@keyframes pulse {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+button {
+		border: 0;
+		background-color: transparent;
+}
+
+#gameBoard {
+		margin: 25px auto 0;
+		display: block;
+		width: 680px;
+}
+
+.tile {
+		width: 160px;
+		height: 160px;
+		margin: 0 5px 10px;
+		transition: all @transition-duration @transition-easing;
+	
+		&:hover,
+		&:focus {
+			opacity: .75;
+			outline: none;
+		}
+	
+		svg {
+				width: 100%;
+				height: 100%;
+		}
+	
+		path {
+				stroke: @grey;
+				stroke-width: 3px;
+				fill: @grey;
+		}
+}
+
+.tile--solved {
+		animation-name: pulse;
+		animation-duration: @transition-duration;
+		animation-timing-function: @transition-easing;
+		animation-delay: @transition-delay;
+	
+		&:hover,
+		&:focus {
+			opacity: 1;
+		}
+
+		path {
+				fill: @gold;
+				stroke: @gold;
+				transition: all @transition-duration @transition-easing @transition-delay;
+		}
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	background-color: fade(@gold, 90%);
+	text-align: center;
+	display: table;
+	transition: opacity (@transition-duration * 2) @transition-easing @transition-delay;
+	visibility: hidden;
+	opacity: 0;
+	
+	p {
+		display: table-cell;
+		vertical-align: middle;
+		color: #636359;
+	}
+}
+
+.overlay--active {
+	opacity: 1;
+	visibility: visible;
+}
