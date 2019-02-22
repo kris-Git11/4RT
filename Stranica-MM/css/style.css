@@ -1,0 +1,36 @@
+body,h1,h2 {
+font-family: "Poppins", sans-serif;
+font-size:16px;
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+}
+h3{
+font-family: "Poppins", sans-serif;
+font-size:50px;
+}
+h4{
+font-family: "Poppins", sans-serif;
+font-size:50px;
+color:blue;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+

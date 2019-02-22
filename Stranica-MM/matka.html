@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Moja stranica</title>
+<meta charset="UTF-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+
+
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-green w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+     <h3 class="w3-padding-64"><img src="Images/abc.png" style="width:50%"><b>Naučimo</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Početna</a> 
+    <a href="matka.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Matematika</a> 
+    <a href="eng.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Engleski</a> 
+    <a href="priroda.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Priroda</a> 
+
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-blue w3-margin-right" onclick="w3_open()">?</a>
+  <span>Moja Stranica</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Matematika</b></h1>
+   
+  </div>
+   <h1 class="w3-xxxlarge w3-text-red"><b>Zbroji</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+<img src="Images\jabuka.png" width="5%"/>
+<img src="Images\jabuka.png" width="5%" />
+<img src="Images\jabuka.png" width="5%" />
+<span> + </span>
+<img src="Images\jabuka.png" width="5%" />
+<img src="Images\jabuka.png" width="5%" />
+<img src="Images\jabuka.png" width="5%" />
+<img src="Images\jabuka.png" width="5%" />
+<input id="value3" type="text" />
+<input type="submit" onclick="output1();">
+<h4 id="result"> </h4>
+
+<img src="Images\mob.png" width="5%" />
+<img src="Images\mob.png" width="5%" />
+<img src="Images\mob.png" width="5%" />
+<img src="Images\mob.png" width="5%" />
+<span> + </span>
+<img src="Images\mob.png" width="5%" />
+<img src="Images\mob.png" width="5%" />
+ <input id="value4" type="text" />
+<input type="submit" onclick="output2();">
+<h4 id="result2"> </h4>
+
+<img src="Images\sat.png" width="5%" />
+<img src="Images\sat.png" width="5%" />
+<img src="Images\sat.png" width="5%" />
+<img src="Images\sat.png" width="5%" />
+<span> + </span>
+<img src="Images\sat.png" width="5%" />
+<img src="Images\sat.png" width="5%" />
+<img src="Images\sat.png" width="5%" />
+<img src="Images\sat.png" width="5%" />
+<img src="Images\sat.png" width="5%" />
+<img src="Images\sat.png" width="5%" />
+ <input id="value5" type="text" />
+<input type="submit" onclick="output3();">
+<h4 id="result3"> </h4>
+    
+  
+  
+
+  <!-- Services -->
+  
+  
+  
+  
+  
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+function output1(){
+var value3 =document.getElementById('value3').value;
+if(value3 ==7){
+document.getElementById('result').innerHTML = "Točno";}
+else
+document.getElementById('result').innerHTML = "Netočno";
+}
+function output2(){
+var value4 =document.getElementById('value4').value;
+if(value4 ==6){
+document.getElementById('result2').innerHTML = "Točno";}
+else
+document.getElementById('result2').innerHTML = "Netočno";}
+function output3(){
+var value5 =document.getElementById('value5').value;
+if(value5==10){
+document.getElementById('result3').innerHTML = "Točno";}
+else
+document.getElementById('result3').innerHTML = "Netočno";}
+
+
+
+
+
+</script>
+
+</body>
+</html>

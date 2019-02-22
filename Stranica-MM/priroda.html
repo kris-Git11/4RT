@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Naucimo</title>
+<meta charset="UTF-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-green w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+	
+    <h3 class="w3-padding-64"><img src="Images/abc.png" style="width:50%"><b>Nauèimo</b></h3>
+	
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Poèetna</a> 
+    <a href="matka.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Matematika</a> 
+    <a href="eng.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Engleski</a> 
+    <a href="priroda.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Priroda</a> 
+
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-blue w3-margin-right" onclick="w3_open()">?</a>
+  <span>Nauèimo</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Priroda</b></h1>
+	 
+   
+  </div>
+  
+  
+
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Godišnja doba</b></h1>
+	<hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  <!-- Photo grid (modal) -->
+	<div class="row">
+		<div class="column">
+      <img src="Images/ljeto.jpg" style="width:100%"  onclick="onClick(this)" alt="LJETO">
+	  </div>
+	  <div class="column">
+      <img src="Images/proljece.jpg" style="width:100%" onclick="onClick(this)" alt="PROLJEÆE">
+	  </div></div>
+	  <div class="row">
+	  <div class="column">
+      <img src="Images/jesen.jpg" style="width:100%" onclick="onClick(this)"  alt="JESEN">
+	  </div>
+	  <div class="column">
+	<img src="Images/zima.jpg" style="width:100%" onclick="onClick(this)"  alt="ZIMA">
+    </div></div>
+  
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Vrijeme na satu</b></h1>
+	<hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  <!-- Photo grid (modal) -->
+	<div class="row">
+		<div class="column">
+      <img src="Images/12sati.png" style="width:80%"  onclick="onClick2(this)" alt="12 sati ili 24 sata">
+	  </div>
+	  <div class="column">
+      <img src="Images/3sata.png" style="width:80%" onclick="onClick2(this)" alt="3 sata ili 15 sati">
+	  </div></div>
+	  <div class="row">
+	  <div class="column">
+      <img src="Images/6sati.png" style="width:80%" onclick="onClick2(this)"  alt="6 sati ili 18 sati">
+	  </div>
+	  <div class="column">
+	<img src="Images/9sati.png" style="width:80%" onclick="onClick2(this)"  alt="9 sati ili 21 sat">
+    </div></div>
+  </div>
+
+ <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+  <div id="modal02" class="w3-modal w3-white" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-white w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img02" class="w3-image">
+      <p id="caption2"></p>
+    </div>
+  </div>
+  
+  
+  
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class=" w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+function onClick2(element) {
+  document.getElementById("img02").src = element.src;
+  document.getElementById("modal02").style.display = "block";
+  var captionText = document.getElementById("caption2");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
