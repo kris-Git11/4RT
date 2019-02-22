@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>untitled</title>
+</head>
+<body>
+<body background="http://www.fullhdwpp.com/wp-content/uploads/Geometry-Digital-Art-Shapes-58_www.FullHDWpp.com_.jpg">
+<h1>"ZBROJI"</h1>
+<input id="value1" type="text" />
+<span> + </span>
+<input id="value2" type="text" />
+<input type="submit" onclick="output();">
+<p id="result"> </p>
+<h1>"ODUZMI"</h1>
+<input id="a" type="text" />
+<span> - </span>
+<input id="b" type="text" />
+<input type="submit" onclick="gumb();">
+<p id="resultat"> </p>
+
+
+<h1>"POMNOZI"</h1>
+<input id="d" type="text" />
+<span> * </span>
+<input id="e" type="text" />
+<input type="submit" onclick="gumb2();">
+<p id="resultat1"> </p>
+
+<h1>"PODIJELI"</h1>
+<input id="f" type="text" />
+<span> / </span>
+<input id="g" type="text" />
+<input type="submit" onclick="gumb3();">
+<p id="resultat2"> </p>
+
+
+<script type="text/javascript" language="javascript" charset="utf-8">
+
+
+
+function output(){
+    var value1 = document.getElementById('value1').value;
+var value2 = document.getElementById('value2').value;
+var value3 =parseInt(value1)+parseInt(value2);
+
+    document.getElementById('result').innerHTML = value3;
+document.getElementById("result").style.color = "blue";
+}
+
+function gumb(){
+    var a= document.getElementById('a').value;
+var b = document.getElementById('b').value;
+var value6 =parseInt(a)-parseInt(b);
+
+    document.getElementById('resultat').innerHTML = value6;
+document.getElementById("resultat").style.color = "red";
+}
+
+function gumb2(){
+    var d= document.getElementById('d').value;
+var e = document.getElementById('e').value;
+var value7 =parseInt(d)*parseInt(e);
+
+    document.getElementById('resultat1').innerHTML = value7;
+document.getElementById("resultat1").style.color = "#yellows";
+}
+
+
+function gumb3(){
+    var f= document.getElementById('f').value;
+var g = document.getElementById('g').value;
+var value8 =parseInt(f)/parseInt(g);
+
+    document.getElementById('resultat2').innerHTML = value8;
+document.getElementById("resultat2").style.color =
+
+ "#ff00ff";
+}
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+
+</script>
+</body>
+</html>
