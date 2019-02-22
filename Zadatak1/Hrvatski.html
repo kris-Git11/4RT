@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-12">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="css/style.css"
+  @import url(https://fonts.googleapis.com/css?family=Lato:900);
+<style>
+</style>
+<h2><center><i>Hrvatska abeceda</i></center></h2>
+
+<div class="foo">
+  <span onclick="myFunction()" class="letter" data-letter="A">A</span>
+  <div id="snackbar">A - Auto</div>
+  <span class="letter" data-letter="B">B</span>
+  <span class="letter" data-letter="C">C</span>
+  <span class="letter" data-letter="&#268;">&#268;</span>
+  <span class="letter" data-letter="&#262;">&#262;</span>
+  <span class="letter" data-letter="D">D</span>
+  <span class="letter" data-letter="Dž">Dž</span>
+  <span class="letter" data-letter="Ð">Ð</span>
+  <span class="letter" data-letter="E">E</span>
+  <span class="letter" data-letter="F">F</span>
+  <span class="letter" data-letter="G">G</span>
+  <span class="letter" data-letter="H">H</span>
+  <span class="letter" data-letter="I">I</span>
+  <span class="letter" data-letter="J">J</span>
+  <span class="letter" data-letter="K">K</span>
+  <span class="letter" data-letter="L">L</span>
+  <span class="letter" data-letter="Lj">Lj</span>
+  <span class="letter" data-letter="M">M</span>
+  <span class="letter" data-letter="N">N</span>
+  <span class="letter" data-letter="Nj">Nj</span>
+  <span class="letter" data-letter="O">O</span>
+  <span class="letter" data-letter="P">P</span>
+  <span class="letter" data-letter="R">R</span>
+  <span class="letter" data-letter="S">S</span>
+  <span class="letter" data-letter="Š">Š</span>
+  <span class="letter" data-letter="T">T</span>
+  <span class="letter" data-letter="U">U</span>
+  <span class="letter" data-letter="V">V</span>
+  <span class="letter" data-letter="Z">Z</span>
+  <span class="letter" data-letter="Ž">Ž</span>
+</div>
+
+<div class="foo">
+	  <h1>Upiši slovo A</h1>
+<input id="value1" type="text" />
+<input type="submit" onclick="output();">
+<p id="result"> </p>
+
+<h1>Upiši slovo T</h1>
+<input id="value2" type="text" />
+<input type="submit" onclick="output1();">
+<p id="result1"> </p>
+
+<h1>Upiši slovo K</h1>
+<input id="value3" type="text" />
+<input type="submit" onclick="output2();">
+<p id="result2"> </p>
+</div>
+
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="file://10.1.0.10/Ucenik/4.RT/Dino%20Leva%C4%8Di%C4%87/Zadatak1/index.html" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="file://10.1.0.10/Ucenik/4.RT/Dino%20Leva%C4%8Di%C4%87/Zadatak1/index.html" class="w3-bar-item w3-button w3-hover-black">POÈETNA</a>
+      <a href="file://10.1.0.10/Ucenik/4.RT/Dino%20Leva%C4%8Di%C4%87/Zadatak1/Hrvatski.html" class="w3-bar-item w3-black w3-button">HRVATSKI</a>
+      <a href="file://10.1.0.10/Ucenik/4.RT/Dino%20Leva%C4%8Di%C4%87/Zadatak1/Matematika%20(1).html" class="w3-bar-item w3-button w3-hover-black">MATEMATIKA</a>
+      <a href="file://10.1.0.10/Ucenik/4.RT/Dino%20Leva%C4%8Di%C4%87/Zadatak1/Engleski.html" class="w3-bar-item w3-button w3-hover-black">ENGLESKI</a>
+      <a href="file://10.1.0.10/Ucenik/4.RT/Dino%20Leva%C4%8Di%C4%87/Zadatak1/Matematika%20(1).html" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+
+function output(){
+    var value1 = document.getElementById('value1').value;
+
+document.getElementById('result').innerHTML = value1;
+document.getElementById("result").style.color = "red";
+
+if(value1 == "a" || value1 == "A")
+{
+document.getElementById('result').innerHTML = "Bravo";
+}
+else
+{
+document.getElementById('result').innerHTML = "Krivo";
+}
+}
+
+function output1(){
+    var value2 = document.getElementById('value2').value;
+
+document.getElementById('result1').innerHTML = value2;
+document.getElementById("result1").style.color = "red";
+
+if(value2 == "t" || value2 == "T")
+{
+document.getElementById('result1').innerHTML = "Bravo";
+}
+else
+{
+document.getElementById('result1').innerHTML = "Krivo";
+}
+}
+
+function output2(){
+    var value3 = document.getElementById('value3').value;
+
+document.getElementById('result2').innerHTML = value3;
+document.getElementById("result2").style.color = "red";
+
+if(value3 == "K" || value3 == "k")
+{
+document.getElementById('result2').innerHTML = "Bravo";
+}
+else
+{
+document.getElementById('result2').innerHTML = "Krivo";
+}
+}
+</script>
+
