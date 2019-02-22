@@ -1,4 +1,5 @@
 # 4RT-klase-1
-skrrrra prapapa getiget wit di nikuh gettin it skraa prapapapapaa
-dvvvvvvvvvv
-Ho ho ho
+
+Repozitorij za radove:
+
+site-js: sjedište, on-line okolina za učenje predškolske djece
