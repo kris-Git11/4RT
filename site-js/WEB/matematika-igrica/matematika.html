@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>MATEMATIKA</title>
+  
+  
+  
+      <style>
+     
+      .container {
+  width: 900px;
+  height: 600px;
+  border-radius: -2px;
+  position: relative;
+}
+
+html, body, #main {  
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  margin: 0px;  
+}
+
+/* Cloud1 with shadow */
+.cloud1 {
+  position: absolute;
+  width: 270px;
+  height: 250px;
+  left: 320px;
+  visibility: hidden;
+}
+
+.cloud_1{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#circle1 {
+  width: 90px;	height: 90px;	background: #FFFFFF;	border-radius: 50px;
+  position: absolute;
+  top: 55px; left: 70px;
+}
+#circle2 {
+  width: 100px;	height: 100px;	background: #FFFFFF;	border-radius: 50px;
+  position: absolute;
+  top: 100px; left: 0px;
+}
+#circle3 {
+  width: 65px;	height: 60px;	background: #FFFFFF;	border-radius: 50px;
+  position: absolute;
+  top: 93px; left: 148px;
+}
+#circle4 {
+  width: 80px;	height: 80px;	background: #FFFFFF;	border-radius: 50px;
+  position: absolute;
+  top: 120px; left: 190px;
+}
+#rect {
+  width: 185px;	height: 72px;	background: #FFFFFF;	border-radius: 0px;
+  position: absolute;
+  top: 128px; left: 45px;
+}
+#circle1Shadow {
+  width: 90px;	height: 90px;	background: #000000;	border-radius: 50px;
+  position: absolute;
+  top: 62px; left: 77px;
+}
+#circle2Shadow {
+  width: 100px;	height: 100px;	background: #000000;	border-radius: 50px;
+  position: absolute;
+  top: 107px; left: 7px;
+}
+#circle3Shadow {
+  width: 65px;	height: 60px;	background: #000000;	border-radius: 50px;
+  position: absolute;
+  top: 100px; left: 155px;
+}
+#circle4Shadow {
+  width: 80px;	height: 80px;	background: #000000;	border-radius: 50px;
+  position: absolute;
+  top: 127px; left: 197px;
+}
+#rectShadow {
+  width: 185px;	height: 72px;	background: #000000;	border-radius: 0px;
+  position: absolute;
+  top: 135px; left: 52px;
+}
+
+#cloud1Shadow {
+  opacity: 0.33;
+}
+
+#text1 {
+  position:absolute;
+  top: 60%;
+  left: 50%;
+  margin: 0px auto;
+  transform: translate(-50%, -50%);
+  font: 20pt verdana;
+  color: #0083ca;
+}
+
+
+/* Cloud2 with shadow */
+.cloud2 {
+  position: absolute;
+  width: 235px;
+  height: 250px;
+  left: 325px;
+  visibility: hidden;
+}
+
+.cloud_2{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#circle1_2 {
+  width: 81px;	height: 81px;	background: #FFFFFF;	border-radius: 50px;
+  position: absolute;
+  top: 61px; left: 95px;
+}
+#circle2_2 {
+  width: 90px;	height: 90px;	background: #FFFFFF;	border-radius: 50px;
+  position: absolute;
+  top: 102px; left: 148px;  
+}
+#circle3_2 {
+  width: 58.5px;	height: 54px;	background: #FFFFFF;	border-radius: 50px;
+  position: absolute;
+  top: 93px; left: 47px;
+}
+#circle4_2 {
+  width: 72px;	height: 72px;	background: #FFFFFF;	border-radius: 50px; 
+  position: absolute;
+  top: 120px; left: 0px;
+}
+#rect_2 {
+  width: 163px;	height: 64.8px;	background: #FFFFFF;	border-radius: 0px;
+  position: absolute;
+  top: 127px; left: 32px;
+}
+#circle1Shadow_2 {
+  width: 81px;	height: 81px;	background: #000000;	border-radius: 50px;
+  position: absolute;
+  top: 67px; left: 102px;
+}
+#circle2Shadow_2 {
+  width: 90px;	height: 90px;	background: #000000;	border-radius: 50px;
+  position: absolute;
+  top: 109px; left: 155px;
+}
+#circle3Shadow_2 {
+  width: 58.5px;	height: 54px;	background: #000000;	border-radius: 50px;
+  position: absolute;
+  top: 100px; left: 54px;
+}
+#circle4Shadow_2 {
+  width: 72px;	height: 72px;	background: #000000;	border-radius: 50px;
+  position: absolute;
+  top: 127px; left: 7px;
+}
+#rectShadow_2 {
+  width: 163px;	height: 64.8px;	background: #000000;	border-radius: 0px;
+  position: absolute;
+  top: 134px; left: 39px;
+}
+
+#cloud2Shadow {
+  opacity: 0.33;
+}
+
+#text2 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin: 0px auto;
+  transform: translate(-50%, -50%);
+  font: 20pt verdana;
+  color: #0083ca;
+}
+
+#input1 {
+  position: absolute;
+  transform: translate(-152px, -54px);
+  font: 14pt verdana;
+  visibility: hidden;
+}
+
+#button1 {
+  position: absolute;
+  transform: translate(54px, -58px);
+  visibility: hidden;
+}
+
+#score {
+  position: absolute;
+  transform: translate(680px, -590px);
+  font: 20pt verdana;
+  color: #0074b3;
+  visibility: hidden;
+}
+
+
+/*-----CSS heart-----*/
+#heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    visibility: hidden;
+}
+#heart:before,
+#heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: #0074b3;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+#heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+/*-----CSS heart-----*/
+
+#button2 {
+  position: absolute;
+  transform: translate(-97px, -158px);
+  visibility: visible;
+}
+
+#gameOver {
+  position: absolute;
+  transform: translate(155px, -670px);
+  visibility: hidden;
+  font: 30pt verdana;
+  color: #0074b3;
+}
+
+
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body background="bg.jpg">
+
+
+  </br><center><div class="container" id="container">
+
+<svg id="main" viewBox="0 0 2347.32 1549.9">  
+<svg id="Background"><defs>
+<style>.cls-1{fill:#fff;}.cls-1,
+.cls-2{stroke:#231f20;stroke-miterlimit:10;}.cls-2{fill:url(#linear-gradient);}
+.cls-12,.cls-3{fill:#fefefe;}
+.cls-3{opacity:0.59;}
+.cls-4{fill:none;}
+.cls-5{fill:#ed1c24;}
+.cls-6{fill:#f7941d;}
+.cls-7{fill:#fff200;}
+.cls-8{fill:#00a651;}
+.cls-9{fill:#00aeef;}
+.cls-10{fill:#0083ca;}
+.cls-11{fill:#602d91;}</style>
+
+<linearGradient id="linear-gradient" x1="1173.62" y1="1549.9" x2="1173.62" y2="1" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff"/><stop offset="0.02" stop-color="#f9fdff" stop-opacity="0.99"/><stop offset="0.39" stop-color="#90dcf8" stop-opacity="0.83"/><stop offset="0.68" stop-color="#42c3f3" stop-opacity="0.7"/><stop offset="0.89" stop-color="#12b4f0" stop-opacity="0.63"/><stop offset="1" stop-color="#00aeef" stop-opacity="0.6"/></linearGradient></defs><title>Untitled-1</title><rect class="cls-1" x="1.07" y="0.5" width="2346.25" height="1548.9"/><rect class="cls-2" x="0.5" y="1" width="2346.25" height="1548.9"/><path class="cls-3" d="M518.35,524.62c-7.49-1.95-27.39-8.2-41.66-27.16-11.25-14.94-13.76-30-14.75-41.68-2.31-27.28,2.62-52.92,17.62-76.16,6.66-10.32,15.64-18.52,25.91-25.07a110,110,0,0,1,41-16.19,114,114,0,0,1,30-.71,117.69,117.69,0,0,1,21.21,4.22A70.37,70.37,0,0,1,608,306.62a68.62,68.62,0,0,1,15.15-17.26c4.4-3.57,21.16-16.75,45.23-15.59a65,65,0,0,1,30.74,9.63,107,107,0,0,1,47.56-72.06c22-14.32,46.22-21.67,72.85-18.92a90.48,90.48,0,0,1,21.26,5.18c11.81,4.81,23.06,10.54,32.76,19a104.41,104.41,0,0,1,22.64,27.67,101.42,101.42,0,0,1,7.57,17.1,102.67,102.67,0,0,1,5.3,29,115.78,115.78,0,0,1,22-8.65,121,121,0,0,1,42.65-3.79c8.47.59,23.53,2.94,41.41,9.39s32.66,17.69,46.76,30.22a109.12,109.12,0,0,1,21.12,24.89,127.67,127.67,0,0,1,11.17,24.25c10.07,30.62,2.42,97.71-3.1,113.35C1070.2,539.07,834.58,560.63,518.35,524.62Z" transform="translate(0.5 1)"/><path class="cls-3" d="M1649.69,711.42c-4-11.34-9.55-60-2.25-82.14a92.52,92.52,0,0,1,8.1-17.58,79.08,79.08,0,0,1,15.3-18c10.21-9.08,20.85-17.19,33.88-21.9a115.92,115.92,0,0,1,30-6.81,87.7,87.7,0,0,1,30.91,2.74,83.9,83.9,0,0,1,15.94,6.27,74.41,74.41,0,0,1,3.84-21,73.5,73.5,0,0,1,5.49-12.39,75.67,75.67,0,0,1,16.41-20.05c7-6.15,15.18-10.3,23.74-13.79a65.57,65.57,0,0,1,15.41-3.75c19.3-2,36.82,3.33,52.79,13.71a77.51,77.51,0,0,1,34.46,52.22,47.08,47.08,0,0,1,22.27-7c17.44-.84,29.59,8.71,32.78,11.3a49.73,49.73,0,0,1,11,12.51,51,51,0,0,1,7.45,25.54,85.29,85.29,0,0,1,15.37-3.06,82.59,82.59,0,0,1,21.75.52A79.68,79.68,0,0,1,2074,620.48a61,61,0,0,1,18.77,18.17c10.87,16.85,14.44,35.43,12.77,55.2-.72,8.45-2.54,19.38-10.69,30.21-10.35,13.74-24.76,18.27-30.19,19.68C1835.53,769.83,1664.78,754.21,1649.69,711.42Z" transform="translate(0.5 1)"/><path class="cls-3" d="M53.78,759.94a64.68,64.68,0,0,1,6.52-34.71c13.1-25.84,39.59-32.91,44-34-.89-2.88-6.87-23.42,5.33-41.33C121.08,633,143.89,625.51,165.82,632c9-39.59,42.79-66.93,79-66.5,27.78.33,53.75,17,68.13,42.69,31-11.28,63.37-5.44,82.14,14.84,12.07,13,15.24,28.55,16.21,36.75a85.29,85.29,0,0,1,15.37-3.06,82.59,82.59,0,0,1,21.75.52A79.68,79.68,0,0,1,478.12,669a61,61,0,0,1,18.77,18.17,81.39,81.39,0,0,1,7.42,14.45c6.19,15.78,6.57,32.1,5.35,40.75-3.46,24.46-29.45,49-65.85,58.72l-321,.61c-4.55.3-41.42,2.2-60.49-23.66A52.91,52.91,0,0,1,53.78,759.94Z" transform="translate(0.5 1)"/><path class="cls-4" d="M1536.85,1316.95c0-120.51-60.38-227.15-153.33-292.94-61.38-43.44-137-69.07-218.75-69.07S1007.39,980.57,946,1024c-92.95,65.78-153.33,172.42-153.33,292.94a355,355,0,0,0,4.21,54.53h735.73A355,355,0,0,0,1536.85,1316.95Z" transform="translate(0.5 1)"/><path class="cls-5" d="M234.56,1316.95c0-301.28,150.92-567.93,383.29-732.39C771.3,476,960.27,411.92,1164.77,411.92s393.46,64,546.92,172.64C1944.05,749,2095,1015.67,2095,1316.95q0,27.47-1.66,54.53h93.16q1.5-27.08,1.52-54.53c0-550.26-457.65-995.53-1023.22-995.53S141.54,766.68,141.54,1316.95q0,27.45,1.52,54.53h93.16Q234.57,1344.42,234.56,1316.95Z" transform="translate(0.5 1)"/><path class="cls-6" d="M1711.68,584.56C1558.23,476,1369.26,411.92,1164.77,411.92S771.3,476,617.85,584.56C385.48,749,234.56,1015.67,234.56,1316.95q0,27.47,1.66,54.53h93.22q-1.83-27-1.85-54.53c0-271.15,135.83-511.14,345-659.15,138.11-97.74,308.18-155.37,492.22-155.37S1518.88,560.06,1657,657.8c209.13,148,345,388,345,659.15q0,27.49-1.85,54.53h93.21q1.65-27.06,1.66-54.53C2095,1015.67,1944.05,749,1711.68,584.56Z" transform="translate(0.5 1)"/><path class="cls-7" d="M420.6,1316.95c0-241,120.73-454.35,306.63-585.91C850,644.16,1001.17,592.93,1164.77,592.93S1479.54,644.16,1602.3,731c185.9,131.56,306.63,344.89,306.63,585.91q0,27.52-2.08,54.53h93.25q1.83-27,1.85-54.53c0-271.15-135.83-511.14-345-659.15-138.11-97.74-308.18-155.37-492.22-155.37S810.65,560.06,672.54,657.8c-209.13,148-345,388-345,659.15q0,27.49,1.85,54.53h93.25Q420.62,1344.48,420.6,1316.95Z" transform="translate(0.5 1)"/><path class="cls-8" d="M1602.3,731c-122.76-86.88-273.94-138.11-437.53-138.11S850,644.16,727.23,731C541.34,862.6,420.6,1075.92,420.6,1316.95q0,27.52,2.08,54.53H516q-2.36-27-2.4-54.53c0-210.9,105.64-397.55,268.3-512.67,107.42-76,239.7-120.85,382.84-120.85s275.42,44.83,382.84,120.85c162.66,115.12,268.3,301.77,268.3,512.67q0,27.56-2.4,54.53h93.34q2.06-27,2.08-54.53C1908.93,1075.92,1788.19,862.6,1602.3,731Z" transform="translate(0.5 1)"/><path class="cls-9" d="M606.64,1316.95c0-180.77,90.55-340.76,230-439.43,92.07-65.16,205.45-103.58,328.15-103.58s236.08,38.42,328.15,103.58c139.42,98.67,230,258.66,230,439.43a535.93,535.93,0,0,1-2.78,54.53h93.4q2.36-27,2.4-54.53c0-210.9-105.64-397.55-268.3-512.67-107.42-76-239.7-120.85-382.84-120.85S889.34,728.25,781.92,804.28c-162.66,115.12-268.3,301.77-268.3,512.67q0,27.56,2.4,54.53h93.4A535.85,535.85,0,0,1,606.64,1316.95Z" transform="translate(0.5 1)"/><path class="cls-10" d="M699.66,1316.95c0-150.64,75.46-284,191.64-366.19,76.73-54.3,171.21-86.32,273.46-86.32s196.73,32,273.46,86.32c116.19,82.23,191.64,215.55,191.64,366.19a445.84,445.84,0,0,1-3.34,54.53h93.58a535.93,535.93,0,0,0,2.78-54.53c0-180.77-90.55-340.76-230-439.43-92.07-65.16-205.45-103.58-328.15-103.58S928.69,812.35,836.62,877.51c-139.42,98.67-230,258.66-230,439.43a535.85,535.85,0,0,0,2.78,54.53H703A445.84,445.84,0,0,1,699.66,1316.95Z" transform="translate(0.5 1)"/><path class="cls-11" d="M1438.22,950.75c-76.73-54.3-171.21-86.32-273.46-86.32s-196.73,32-273.46,86.32C775.12,1033,699.66,1166.31,699.66,1316.95a445.84,445.84,0,0,0,3.34,54.53h93.9a355,355,0,0,1-4.21-54.53c0-120.51,60.38-227.15,153.33-292.94,61.38-43.44,137-69.07,218.75-69.07s157.37,25.63,218.75,69.07c92.95,65.78,153.33,172.42,153.33,292.94a355,355,0,0,1-4.21,54.53h93.9a445.84,445.84,0,0,0,3.34-54.53C1629.87,1166.31,1554.41,1033,1438.22,950.75Z" transform="translate(0.5 1)"/><path class="cls-12" d="M2305.54,1440.86a191.18,191.18,0,0,1-56.28,53.21c-8.79,5.33-16.76,11.89-25.94,16.57-23,11.72-48.11,14.58-73,15.34-182.43,5.51-364.92,1.36-547.39,2.28a250.63,250.63,0,0,1-78.41-11.88c-25.49-8.3-49.78-22.2-67.95-42.06-17.91-19.58-28-44.32-30.27-71.67-3.25-38.51,5.73-74.1,24.74-107.25a81.53,81.53,0,0,1,16.9-20.26c6.7-5.87,27.73-26.67,60.38-34.25,44.79-10.39,81.61,10.19,90.42,15.43-.69-7.45-3.34-44.17,22.94-75.26,33-39,83-35.24,88.52-34.72a102.52,102.52,0,0,1,34.13,9.42c3.12-14.27,14.78-58.83,56.59-92.65,10.29-8.32,46.56-36.42,97.8-35.54,18.28.31,37.05,4.53,56.18,13.37,24.93,11.52,45.93,27.63,61.15,49.19,4.6,6.51,11.77,16.79,16.76,32.17a112.88,112.88,0,0,1,3,57c16-30.05,52.18-41.41,79.41-27.84,23.07,11.5,36.13,39.11,30.24,66.77,12.95-2.19,56.65-7.9,100.28,18,5.2,3.08,64.08,39.31,69.83,107.56C2339.65,1392.93,2313.6,1429.33,2305.54,1440.86Z" transform="translate(0.5 1)"/><path class="cls-12" d="M864.35,1454.89c-1.53,4.79-7.83,22.76-30.67,40-40.43,30.52-90.89,27.22-111.91,26.05-70.26-3.91-140.71,2.65-211.08,2.62-93.33,0-186.67-1-280-.58a224.84,224.84,0,0,1-70.35-10.66c-19.64-6.39-43-15.09-61-37.73-20.73-26.19-30.57-67.37-14.39-102.37,3.35-7.25,13.29-29.61,38-40.67a71.68,71.68,0,0,1,36-5.67c-2.9-26.78,12-52.14,36-62,21.53-8.85,46.81-3.74,64,13-5.4-39.19,12.34-77.74,45-98,45.4-28.17,93.67-4.89,96.35-3.54.19-7.88,1.94-46.57,33-75.09,30.26-27.77,67.49-26.67,80.63-26.44,16.4.28,33.24,4.07,50.4,12,22.36,10.33,41.2,24.78,54.86,44.13a102.58,102.58,0,0,1,15,28.86,101.25,101.25,0,0,1,2.67,51.11A88,88,0,0,1,665,1195c41-12.86,92.29,5.91,120,43.91,24.83,34,28.36,80.11,10,120,8-.49,25.13-.37,41.33,10C864.73,1387.05,873.57,1426,864.35,1454.89Z" transform="translate(0.5 1)"/></svg>
+</svg>
+
+
+<div class = "cloud1" id = "cloud1"><div class = "cloud_1" id = "cloud_1">
+  <div id = cloud1Shadow>
+    <div id = "circle1Shadow"></div><div id = "circle2Shadow"></div>
+    <div id = "circle3Shadow"></div><div id = "circle4Shadow"></div>
+    <div id = "rectShadow"></div>
+  </div>
+    <div id = "circle1"></div><div id = "circle2"></div>
+    <div id = "circle3"></div><div id = "circle4"></div>
+    <div id = "rect"></div>
+    <div id = "text1">5+7+9</div></div></div>
+  
+<div class = "cloud2" id = "cloud2"><div class = "cloud_2" id = "cloud_2">
+  <div id = cloud2Shadow>
+    <div id = "circle1Shadow_2"></div><div id = "circle2Shadow_2"></div>
+    <div id = "circle3Shadow_2"></div><div id = "circle4Shadow_2"></div>
+    <div id = "rectShadow_2"></div>
+  </div>
+    <div id = "circle1_2"></div><div id = "circle2_2"></div>
+    <div id = "circle3_2"></div><div id = "circle4_2"></div>
+    <div id = "rect_2"></div>
+    <div id = "text2">2+2+7+9</div></div></div>
+  
+ <input id="input1" type="text" size="15" oninput="validateInput(this)" maxlength="10" onkeydown = "if (event.keyCode == 13)
+                        document.getElementById('button1').click()"/>
+   
+<span class="button1" id="button1" style="box-shadow: 0px 1px 0px 0px rgb(187, 218, 247) inset; background: rgb(103, 208, 246) linear-gradient(to bottom, rgb(103, 208, 246) 5%, rgb(61, 153, 184) 100%) repeat scroll 0% 0%; border-radius: 9px; display: inline-block; cursor: pointer; color: rgb(255, 255, 255); font-family: Verdana; font-size: 14pt; padding: 6px 24px; text-decoration: none; text-shadow: 0px 1px 0px rgb(60, 143, 173);" onclick="submit()">Submit</span>  
+  
+<div id = "score">Bodovi: 0</div>  
+  
+<div id = "heart"></div>
+  
+<span class="button2" id="button2" style="box-shadow: 0px 1px 0px 0px rgb(187, 218, 247) inset; background: rgb(103, 208, 246) linear-gradient(to bottom, rgb(103, 208, 246) 5%, rgb(61, 153, 184) 100%) repeat scroll 0% 0%; border-radius: 9px; display: inline-block; cursor: pointer; color: rgb(255, 255, 255); font-family: Verdana; font-size: 20pt; padding: 6px 24px; text-decoration: none; text-shadow: 0px 1px 0px rgb(60, 143, 173);" onclick="start()">Start game</span>  
+  
+<div id = "gameOver">KRAJ IGRE! Imaš 0 bodova :(</div>  
+  
+</div>
+  
+</center>
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
