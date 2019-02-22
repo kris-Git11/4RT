@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="škola, osnovna, prvi, razred">
+  <meta name="author" content="Jakov Kocijan">
+
+  <title>Engleski</title>
+
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <link href="css/main.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Školarci</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Meni
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="hrvatski.html">Hrvatski</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="matematika.html">Matematika</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="engleski.html">Engleski</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="masthead" style="background-image: url('img/eng-bg.png')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <span class="subheading">ENGLESKI</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <form id="form1">
+          <h4> Select the red box</h4>
+          <label for="var_string">
+            <input type="radio" name="color" value="0" id="var_string"/> <br/>
+            </label>
+            <div style="height:25px;width:25px;background-color:blue;display:inline-block"></div>
+            <br/>
+            <label for="var_info">
+            <input type="radio" name="color" value="1" id="var_info"/>
+            </label>
+            <div style="height:25px;width:25px;background-color:red;display:inline-block"></div>
+            <br/>
+            <label for="var_condition">
+            <input type="radio" name="color" value="0" id="var_condition"/>
+          </label>   
+          <div style="height:25px;width:25px;background-color:green;display:inline-block"></div>
+            <br/><br/><br/>
+
+          <h4> Select the car</h4>
+          <label for="can_string">
+            <input type="radio" name="car" value="1" id="can_string"/>
+            </label>
+            <img src="img/car.png" />
+            <br/>
+            <label for="var_info">
+            <input type="radio" name="car" value="0" id="can_info"/>
+            </label>
+            <img src="img/tree.jpg" />
+            <br/>
+            <label for="var_condition">
+            <input type="radio" name="car" value="0" id="can_condition"/>
+            <img src="img/house.jpg" />
+            <br/>
+          </label>   
+          <br/><br/><br/>
+      
+          <h4> What is on the picture?</h4><img src="img/house.jpg" />
+          <br/>
+          <label for="sub_string">
+            <input type="radio" name="house" value="0" id="sub_string"/>Tree<br/>
+            </label>
+            <label for="var_info">
+            <input type="radio" name="house" value="0" id="sub_info"/> Car<br/>
+            </label>
+            <label for="var_condition">
+            <input type="radio" name="house" value="1" id="sub_condition"/> House<br/>
+          </label>
+          <br/><br/><br/>
+      
+          <h4> Select the tree</h4>
+          <label for="if_string">
+            <input type="radio" name="tree" value="0" id="if_string"/>
+            </label>
+            <img src="img/car.png" />
+            <br/>
+            <label for="var_info">
+            <input type="radio" name="tree" value="0" id="if_info"/>
+            </label>
+            <img src="img/house.jpg" />
+            <br/>
+            <label for="var_condition">
+            <input type="radio" name="tree" value="1" id="if_condition"/>
+          </label>
+          <img src="img/tree.jpg" />
+            <br/><br/><br/>
+      
+            <button type="submit" value="submit"> Provijeri</button>
+      
+            </form>
+      
+            <p> Ukupno ispravnih odgovora <span id="grade1"> ____</span></p>
+            <p id="grade2"></p>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/jakov.kocijan">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; Jakov Kocijan 2019</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="js/main.js"></script>
+
+  <script src="js/engleski-igra.js"></script>
+  
+</body>
+
+</html>
