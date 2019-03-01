@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Matematika</title>
+<meta charset="UTF-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+
+
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-green w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+     <h3 class="w3-padding-64"><img src="Images/matematikalogo.png" style="width:50%"></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Odabir</a> 
+    <a href="matematika.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Matematika</a> 
+    <a href="eng.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Engleski</a> 
+    <a href="hrvatski.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Hrvatski</a> 
+
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-blue w3-margin-right" onclick="w3_open()">?</a>
+  <span>Moja Stranica</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"style="color:green;"><b>Matematika</b></h1>
+   
+  </div>
+   <h1 class="w3-xxxlarge w3-text-green"><b>Zbroji jabuke</b></h1>
+    <hr style="width:1000px;border:5px solid green" class="w3-round">
+<img src="Images\jabuka.png" width="5%"/>
+<img src="Images\jabuka.png" width="5%" />
+<span> + </span>
+<img src="Images\jabuka.png" width="5%" />
+<img src="Images\jabuka.png" width="5%" />
+<img src="Images\jabuka.png" width="5%" />
+<input id="value1" type="text" />
+<input type="submit" onclick="output1();">
+<h4 id="result"> </h4>
+
+<img src="Images\jabuka.png" width="5%" />
+<img src="Images\jabuka.png" width="5%" />
+<img src="Images\jabuka.png" width="5%" />
+<img src="Images\jabuka.png" width="5%" />
+<span> + </span>
+<img src="Images\jabuka.png" width="5%" />
+<img src="Images\jabuka.png" width="5%" />
+<img src="Images\jabuka.png" width="5%" />
+ <input id="value2" type="text" />
+<input type="submit" onclick="output2();">
+<h4 id="result2"> </h4>
+
+    <hr style="width:1000px;border:5px solid green" class="w3-round">
+	   <h1 class="w3-xxxlarge w3-text-green"><b>Oduzmi banane</b></h1>
+<img src="Images\banana.png" width="5%" />
+<img src="Images\banana.png" width="5%" />
+<img src="Images\banana.png" width="5%" />
+<img src="Images\banana.png" width="5%" />
+<span> - </span>
+<img src="Images\banana.png" width="5%" />
+<img src="Images\banana.png" width="5%" />
+
+
+ <input id="value3" type="text" />
+<input type="submit" onclick="output3();">
+<h4 id="result3"> </h4>
+
+
+
+<img src="Images\banana.png" width="5%" />
+<img src="Images\banana.png" width="5%" />
+<img src="Images\banana.png" width="5%" />
+<img src="Images\banana.png" width="5%" />
+<img src="Images\banana.png" width="5%" />
+<img src="Images\banana.png" width="5%" />
+<span> - </span>
+<img src="Images\banana.png" width="5%" />
+<img src="Images\banana.png" width="5%" />
+ <input id="value4" type="text" />
+<input type="submit" onclick="output4();">
+<h4 id="result4"> </h4>
+    
+      <hr style="width:1000px;border:5px solid green" class="w3-round">
+	   <h1 class="w3-xxxlarge w3-text-green"><b>Pomnoži naranče</b></h1>
+	   
+  <img src="Images\naranca.png" width="5%" />
+<img src="Images\naranca.png" width="5%" />
+<img src="Images\naranca.png" width="5%" />
+
+<span> * </span>
+<img src="Images\naranca.png" width="5%" />
+<img src="Images\naranca.png" width="5%" />
+ <input id="value5" type="text" />
+<input type="submit" onclick="output5();">
+<h4 id="result5"> </h4>
+
+
+
+<img src="Images\naranca.png" width="5%" />
+<img src="Images\naranca.png" width="5%" />
+
+<span> * </span>
+<img src="Images\naranca.png" width="5%" />
+<img src="Images\naranca.png" width="5%" />
+<img src="Images\naranca.png" width="5%" />
+<img src="Images\naranca.png" width="5%" />
+ <input id="value6" type="text" />
+<input type="submit" onclick="output6();">
+<h4 id="result6"> </h4>
+
+
+  <!-- Services -->
+  <hr style="width:1050px;border:5px solid green" class="w3-round">
+
+    <h1 class="w3-xxxlarge w3-text-green"><b>Tablica zbrajanja do 20</b></h1>
+  <img src="Images/tablicazbrajanja.jpg" style="width:70%"   alt="abeceda">
+    <hr style="width:1050px;border:5px solid green" class="w3-round">
+
+    <h1 class="w3-xxxlarge w3-text-green"><b>Tablica oduzimanja do 20</b></h1>
+  <img src="Images/tablicaoduzimanja.jpg" style="width:70%"   alt="abeceda">
+  
+  
+  
+  
+  
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+function output1(){
+var value1 =document.getElementById('value1').value;
+if(value1 ==5){
+document.getElementById('result').innerHTML = "Točno! BRAVO :)";}
+else
+document.getElementById('result').innerHTML = "Netočno";
+}
+function output2(){
+var value2 =document.getElementById('value2').value;
+if(value2 ==7){
+document.getElementById('result2').innerHTML = "Točno! BRAVO :)";}
+else
+document.getElementById('result2').innerHTML = "Netočno";}
+function output3(){
+var value3 =document.getElementById('value3').value;
+if(value3==2){
+document.getElementById('result3').innerHTML = "Točno! BRAVO :)";}
+else
+document.getElementById('result3').innerHTML = "Netočno";}
+function output4(){
+var value4 =document.getElementById('value4').value;
+if(value4==4){
+document.getElementById('result4').innerHTML = "Točno! BRAVO :)";}
+else
+document.getElementById('result4').innerHTML = "Netočno";}
+function output5(){
+var value5 =document.getElementById('value5').value;
+if(value5==6){
+document.getElementById('result5').innerHTML = "Točno! BRAVO :)";}
+else
+document.getElementById('result5').innerHTML = "Netočno";}
+function output6(){
+var value6 =document.getElementById('value6').value;
+if(value6==8){
+document.getElementById('result6').innerHTML = "Točno! BRAVO :)";}
+else
+document.getElementById('result6').innerHTML = "Netočno";}
+
+
+
+
+
+</script>
+
+</body>
+</html>

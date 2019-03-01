@@ -1,0 +1,33 @@
+body,h1,h2 {
+font-family: "Trebuchet MS", sans-serif;
+font-size:16px;
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+}
+p{font-family:"Trebuchet MS", sans-serif;
+font-size:30px;} 
+h3{
+font-family: "Trebuchet MS", sans-serif;
+font-size:16px;
+font-color:blue;}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+

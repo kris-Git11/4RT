@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<head>
+<title>Prvašiæi</title>
+<meta charset="UTF-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">	
+    <h3 class="w3-padding-64"></h3>
+  </div>
+  
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Odabir</a> 
+    <a href="matematika.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Matematika</a> 
+    <a href="hrvatski.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Hrvatski</a> 
+ <a href="eng.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Engleski</a> 
+  </div>
+</nav>
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-blue w3-margin-right" onclick="w3_open()">?</a>
+  <span>PRVASICI</span>
+</header>
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo" style="color:red;"><b>Odaberite predmet za uèenje</b></h1>
+	
+  
+    <hr style="width:900px;border:5px solid red" class="w3-round">
+    <p style="color:LightCoral;">Nadamo se da æemo nauèiti vaše prvašiæe nešto novo :)
+    </p>
+	  <hr style="width:900px;border:5px solid red" class="w3-round">
+  </div>
+  
+  
+
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:10px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Predmeti</b></h1>
+	<hr style="width:1500px;border:5px solid red" class="w3-round">
+
+  </div>
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="Images/matematika.jpg" alt="matematika" style="width:92%"usemap="#map1">
+        <div class="w3-container" style="text-align:center">
+          <h3>   MATEMATIKA</h3>
+         
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="Images/hrvatskijezik.jpg" alt="hrvatski" style="width:100%" usemap="#map2">
+        <div class="w3-container" style="text-align:center">
+          <h3>HRVATSKI</h3>
+
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom" align="middle">
+      <div class="w3-light-grey">
+        <img src="Images/engleski.jpg" alt="engleski" style="width:87%" usemap="#map3" >
+        <div class="w3-container" style="text-align:center">
+          <h3>ENGLESKI</h3>
+     
+
+        </div>
+		
+      </div>
+    </div>
+	
+<map name="map1">
+		<area shape="rect" coords="0,0,500,300" alt="Computer" href="matematika.html">	
+	<map name="map3">
+		<area shape="rect" coords="0,0,500,300" alt="Computer" href="eng.html">	
+	<map name="map2">
+		<area shape="rect" coords="0,0,500,300" alt="Computer" href="hrvatski.html">	
+	</map>
+  </div>
+
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+  
+  
+  
+  
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
