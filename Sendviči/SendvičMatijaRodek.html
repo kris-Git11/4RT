@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<style>
+.center {
+  margin: auto;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+</style>
+<body>
+
+
+<h1>Sastavi svoj sendvi&#269</h1>
+
+<div class="bottom-left">Kulen</div><img src="https://ip.index.hr/remote/indexnew.s3.index.hr/images2/kulen_2112013_shutter625.jpg?width=765&height=490" border="2" align="center"> <input type="text" id="brKulen" value="Koli&#269ina">2kn/k
+<br>
+
+<div class="bottom-left">Sir</div><img src="https://www.naturalfoodseries.com/wp-content/uploads/2018/02/Cheese-800x416.jpg" border="2" align="center"><input type="text" id="brSir" value="Koli&#269ina">1kn/k
+<br>
+
+<div class="bottom-left">Salata</div><img src="https://media.istockphoto.com/photos/lettece-seedlings-ready-for-sale-at-ljubljana-market-slovenia-picture-id543581176?k=6&m=543581176&s=612x612&w=0&h=ioSY6OKN1HwKiyT45dLx66fEdsycLhkOYy9rkrUf6Ag=" border="2" align="center"><input type="text" id="brSalata" value="Koli&#269ina"><img src="">1.5kn/k
+<br>
+
+<div class="bottom-left">Luk</div><img src="https://i5.walmartimages.ca/images/Large/601/045/999999-33383601045.jpg" border="2" align="center"><input type="text" id="brLuk" value="Koli&#269ina">0.5kn/k
+<br>
+
+<div class="bottom-left">Krastavci</div><img src="http://alternativa-za-vas.com/images/uploads/krastavci.jpg" border="2" align="center"><input type="text" id="brKrastavci" value="Koli&#269ina">2kn/k
+<br>
+
+<div class="bottom-left">Ke&#269ap</div><img src="https://i.kinja-img.com/gawker-media/image/upload/s--ZSE9PXtg--/c_scale,f_auto,fl_progressive,q_80,w_800/smxkhmycr7onfnhmnvng.jpg" border="2" align="center"><input type="text" id="brKeèap" value="Koli&#269ina">2kn/k
+<br>
+
+<div class="bottom-left">Umak</div><img src="https://www.conroyfoods.com/wp-content/uploads/2015/02/Buffalo2.png" border="2" align="center"><input type="text" id="brUmak" value="Koli&#269ina">1.5kn/k
+<br>
+
+Jedno pecivo: 4 kune.
+<br>
+
+<button onclick="ukupnaCijena()">Ukupna Cijena</button>
+
+<div>
+
+<p id="cijena"> </p> kune za platiti.
+<br>
+
+<br>
+
+Sendvi&#269 se sastoji od:
+<p id="proizvod1"> <p>
+
+</div>
+
+<script>
+function ukupnaCijena() {
+	var proizvod1 = parseInt(document.getElementById("brKulen").value, 10);
+    
+    if(document.getElementById("brSalama").value == 'Koli&#269ina')
+    {
+    	proizvod1 = 0;
+    }
+    
+    var proizvod2 = parseInt(document.getElementById("brSir").value, 10);
+    
+        if(document.getElementById("brSir").value == 'Koli&#269ina')
+    {
+    	proizvod2 = 0;
+    }
+    var proizvod3 = parseInt(document.getElementById("brSalata").value, 10);
+    
+        if(document.getElementById("brSalata").value == 'Koli&#269ina')
+    {
+    	proizvod3 = 0;
+    }
+    var proizvod4 = parseInt(document.getElementById("brLuk").value, 10);
+    
+        if(document.getElementById("brLuk").value == 'Koli&#269ina')
+    {
+    	proizvod4 = 0;
+    }
+    var proizvod5 = parseInt(document.getElementById("brKrastavci").value, 10);
+    
+        if(document.getElementById("brKrastavci").value == 'Koli&#269ina')
+    {
+    	proizvod5 = 0;
+    }
+    var proizvod6 = parseInt(document.getElementById("brKeèap").value, 10);
+    
+        if(document.getElementById("brKeèap").value == 'Koli&#269ina')
+    {
+    	proizvod6 = 0;
+    }
+    var proizvod8 = parseInt(document.getElementById("brUmak").value, 10);
+    
+        if(document.getElementById("brLjutiUmak").value == 'Koli&#269ina')
+    {
+    	proizvod8 = 0;
+    }
+	
+    
+    var konacnaCijena = ((proizvod1 * 2) + proizvod2 + (proizvod3 * 1.5) + (proizvod4 * 0.5) + (proizvod5 *2) + (proizvod6 * 2) + (proizvod7 * 1.5)+(proizvod8 * 1.5)+4)
+
+  document.getElementById("cijena").innerHTML = konacnaCijena;
+}
+</script>
+
+
+</body>
+</html>
