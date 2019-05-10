@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-11">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+</style>
+<body>
+
+
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+  <div class="w3-center w3-padding-16">Moj sendviè</div>
+  </div>
+</div>
+  
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+      <img src="pecivo.jpg" alt="Sandwich" style="width:100%">
+      <h3>Koliko peciva želiš?</h3>
+	  <input type="text" id="pecivo">
+      <p>Cijena po komadu: <b>6 kn </b></p>
+    </div>
+    <div class="w3-quarter">
+      <img src="salama.jpg" alt="Steak" style="width:100%">
+      <h3>Koliko salame?</h3>
+	  <p>1 -> 20g</p>
+	  <input type="text" id="salama">
+      <p>Cijena po 20g: <b>8 kn</b></p>
+    </div>
+    <div class="w3-quarter">
+      <img src="salata.jpg" alt="Cherries" style="width:100%">
+      <h3>Da li želiš salatu?</h3>
+	  <p>Upisi DA/NE</p>
+	  <input type="text" id="salata">
+      <p>Cijena po komadu: <b>5 kn</b></p>
+    </div>
+    <div class="w3-quarter">
+      <img src="ljuti zacin.jpeg" alt="Pasta and Wine" style="width:100%">
+      <h3>Da li želiš ljutog zaèina?</h3>
+	  <p>Upisi DA/NE</p>
+	  <input type="text" id="ljuti">
+      <p>Cijena po komadu: <b>2 kn</b></p>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="majoneza.jpg" alt="Popsicle" style="width:100%">
+      <h3>Da li želiš majonezu?</h3>
+	  <p>Upisi DA/NE</p>
+	  <input type="text" id="majoneza">
+      <p>Cijena po komadu: <b>3 kn</b></p>
+    </div>
+    <div class="w3-quarter">
+      <img src="kecap.jpg" alt="Salmon" style="width:100%">
+      <h3>Da li želiš keèapa</h3>
+	  <p>Upisi DA/NE</p>
+	  <input type="text" id="kecap">
+      <p>Cijena po komadu: <b>3 kn</b></p>
+    </div>
+  </div>
+
+<div class="w3-row-padding w3-padding-16 w3-center">
+  <button class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="ukupnacijena()">Ukupna cijena je: <p id="cijena"> </p>kuna</button>
+ </div> 
+
+  
+
+<!-- End page content -->
+</div>
+
+<script>
+function ukupnacijena() {
+	var proizvod1 = parseInt(document.getElementById("pecivo").value, 10);
+    
+    if(document.getElementById("pecivo").value == '')
+    {
+    	proizvod1 = 0;
+    }
+    
+    var proizvod2 = parseInt(document.getElementById("salama").value, 10);
+    
+        if(document.getElementById("salama").value == '')
+    {
+    	proizvod2 = 0;
+    }
+    var proizvod3 = document.getElementById('salata').value;
+	
+		if(proizvod3 == "DA" || proizvod3 == "da" || proizvod3 == "Da" || proizvod3 == "dA") { proizvod3=5;}
+   
+    else{
+    	proizvod3 = 0;
+    }
+    var proizvod4 = document.getElementById('ljuti').value;
+    
+        if(proizvod4 == "DA" || proizvod4 == "da" || proizvod4 == "Da" || proizvod4 == "dA") { proizvod4=2;}
+   
+    else{
+    	proizvod4 = 0;
+    }
+    var proizvod5 = document.getElementById('majoneza').value;
+    
+        if(proizvod5 == "DA" || proizvod5 == "da" || proizvod5 == "Da" || proizvod5 == "dA") { proizvod5=3;}
+   
+    else{
+    	proizvod5 = 0;
+    }
+    var proizvod6 = document.getElementById('kecap').value;
+    
+        if(proizvod6 == "DA" || proizvod6 == "da" || proizvod6 == "Da" || proizvod6 == "dA") { proizvod6=3;}
+   
+    else{
+    	proizvod6 = 0;
+    }
+   
+	
+    
+    var konacnaCijena = ((proizvod1 * 6) + (proizvod2 * 8) + (proizvod3) + (proizvod4) + (proizvod5) + (proizvod6))
+
+  document.getElementById("cijena").innerHTML = konacnaCijena;
+}
+</script>
+
+
+</body>
+</html>
