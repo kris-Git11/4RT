@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Sendvici</h1>
+
+Salama:  <input type="text" id="brSalama" value="Količina"> 1.5kn/k
+<br>
+
+Sir:<input type="text" id="brSir" value="Količina">1kn/k
+<br>
+
+Salata:<input type="text" id="brSalata" value="Količina">0.25kn/k
+<br>
+
+Luk:<input type="text" id="brLuk" value="Količina">0.25kn/k
+<br>
+
+Majoneza:<input type="text" id="brMajoneza" value="Količina">0.13kn/k
+<br>
+
+Kečap:<input type="text" id="brKečap" value="Količina">0.13kn/k
+<br>
+
+Blagi umak:<input type="text" id="brBlagiUmak" value="Količina">0.33kn/k
+<br>
+
+Ljuti umak:<input type="text" id="brLjutiUmak" value="Količina">0.33kn/k
+<br>
+
+Jedno pecivo košta 2 kune.
+<br>
+
+<button onclick="ukupnaCijena()">UkupnaCijena</button>
+
+<div>
+
+<p id="cijena"> </p> kune za platiti.
+<br>
+
+<br>
+
+
+
+</div>
+
+<script>
+function ukupnaCijena() {
+	var proizvod1 = parseInt(document.getElementById("brSalama").value, 10);
+    
+    if(document.getElementById("brSalama").value == 'Količina')
+    {
+    	proizvod1 = 0;
+    }
+    
+    var proizvod2 = parseInt(document.getElementById("brSir").value, 10);
+    
+        if(document.getElementById("brSir").value == 'Količina')
+    {
+    	proizvod2 = 0;
+    }
+    var proizvod3 = parseInt(document.getElementById("brSalata").value, 10);
+    
+        if(document.getElementById("brSalata").value == 'Količina')
+    {
+    	proizvod3 = 0;
+    }
+    var proizvod4 = parseInt(document.getElementById("brLuk").value, 10);
+    
+        if(document.getElementById("brLuk").value == 'Količina')
+    {
+    	proizvod4 = 0;
+    }
+    var proizvod5 = parseInt(document.getElementById("brMajoneza").value, 10);
+    
+        if(document.getElementById("brMajoneza").value == 'Količina')
+    {
+    	proizvod5 = 0;
+    }
+    var proizvod6 = parseInt(document.getElementById("brKečap").value, 10);
+    
+        if(document.getElementById("brKečap").value == 'Količina')
+    {
+    	proizvod6 = 0;
+    }
+    var proizvod7 = parseInt(document.getElementById("brBlagiUmak").value, 10);
+    
+        if(document.getElementById("brBlagiUmak").value == 'Količina')
+    {
+    	proizvod7 = 0;
+    }
+    var proizvod8 = parseInt(document.getElementById("brLjutiUmak").value, 10);
+    
+        if(document.getElementById("brLjutiUmak").value == 'Količina')
+    {
+    	proizvod8 = 0;
+    }
+	
+    
+    var konacnaCijena = ((proizvod1 * 1.5) + proizvod2 + (proizvod3 * 0.25) + (proizvod4 * 0.25) + (proizvod5 *0.13) + (proizvod6 * 0.33) + (proizvod7 * 0.33)+2)
+
+  document.getElementById("cijena").innerHTML = konacnaCijena;
+}
+</script>
+
+</body>
+</html>
