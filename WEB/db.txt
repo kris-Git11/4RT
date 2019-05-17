@@ -1,0 +1,329 @@
+   package com.example.android.myapplication;
+
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+
+public class MainActivity extends AppCompatActivity {
+
+    SQLiteDatabase myDB = null;
+
+    String podaci_iz_baze = "";
+    ArrayList<String> listItems;
+    ArrayAdapter<String> adapter;
+    ListView listView;
+
+    long selID;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        ListView listView = (ListView) findViewById(R.id.listView);
+        listItems = new ArrayList<String>();
+        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, listItems);
+        listView.setAdapter(adapter);
+
+        try {
+            myDB = this.openOrCreateDatabase("knjiznica", MODE_PRIVATE, null);
+            myDB.execSQL("DROP TABLE IF EXISTS knjige");
+
+            myDB.execSQL("CREATE TABLE IF NOT EXISTS knjige (id INTEGER PRIMARY KEY AUTOINCREMENT, naslov VARCHAR(20),autor VARCHAR(20), broj_stranica INTEGER);");
+
+
+            myDB.execSQL("INSERT INTO knjige (naslov, autor, broj_stranica) VALUES ('Gospoda','Moroslav',350);");
+            myDB.execSQL("INSERT INTO knjige (naslov, autor, broj_stranica) VALUES ('Zloèin','Dostojevski',700);");
+
+
+
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                    EditText Edit1 = (EditText) findViewById(R.id.edit1);
+                    EditText Edit2 = (EditText) findViewById(R.id.edit2);
+                    EditText Edit3 = (EditText) findViewById(R.id.edit3);
+                    //Toast.makeText(getApplicationContext(), ((TextView) v).getText(), Toast.LENGTH_SHORT).show();
+                    String [] zapis = ((TextView)v).getText().toString().split(" ");
+                    selID = Integer.parseInt(zapis[0]);
+                    Edit1.setText(zapis[1]);
+                    Edit2.setText(zapis[2]);
+                    Edit3.setText(zapis[3]);
+
+                }
+            });
+
+            Cursor c = myDB.rawQuery("SELECT * FROM knjige", null);
+
+            c.moveToFirst();
+            if (c != null) {
+                do {
+                    int id = c.getInt(c.getColumnIndex("id"));
+                    String nas = c.getString(c.getColumnIndex("naslov"));
+                    String aut = c.getString(c.getColumnIndex("autor"));
+                    int brStr = c.getInt(c.getColumnIndex("broj_stranica"));
+                    podaci_iz_baze += id + " " + nas + " " + aut + " " + brStr + "\n";
+                    listItems.add(id + " " + nas + " " + aut + " " + brStr);
+                    adapter.notifyDataSetChanged();
+                } while (c.moveToNext());
+            }
+
+            TextView textview1 = (TextView) findViewById(R.id.textview1);
+            textview1.setText(podaci_iz_baze);
+
+
+        } catch (Exception e) {
+            Log.e("Error", "Error", e);
+        } finally {
+            if (myDB != null) myDB.close();
+        }
+    }
+
+    public void clickButton(View view) {
+
+
+        EditText Edit1 = (EditText) findViewById(R.id.edit1);
+        EditText Edit2 = (EditText) findViewById(R.id.edit2);
+        EditText Edit3 = (EditText) findViewById(R.id.edit3);
+
+        try {
+            myDB = this.openOrCreateDatabase("knjiznica", MODE_PRIVATE, null);
+           myDB.execSQL("CREATE TABLE IF NOT EXISTS knjige (id INTEGER PRIMARY KEY AUTOINCREMENT, naslov VARCHAR(20),autor VARCHAR(20), broj_stranica INTEGER);");
+
+            String nasl = Edit1.getText().toString();
+            String auto =  Edit2.getText().toString();
+            Integer br = Integer.parseInt(Edit3.getText().toString());
+
+            myDB.execSQL("INSERT INTO knjige (naslov, autor, broj_stranica) VALUES ('"+ nasl +"', '"+auto+"', '"+br+"');");
+
+            Cursor c = myDB.rawQuery("SELECT * FROM knjige", null);
+
+            listItems.clear();
+            c.moveToFirst();
+            if (c != null) {
+                do {
+                    int id = c.getInt(c.getColumnIndex("id"));
+                    String nas = c.getString(c.getColumnIndex("naslov"));
+                    String aut = c.getString(c.getColumnIndex("autor"));
+                    int bro = c.getInt(c.getColumnIndex("broj_stranica"));
+                    podaci_iz_baze += id + " " + nas + " " + aut + " " + bro + "\n";
+                    listItems.add(""+id + " " + nas + " " + aut + " " + bro);
+                    adapter.notifyDataSetChanged();
+                } while (c.moveToNext());
+            }
+            TextView textview1 = (TextView) findViewById(R.id.textview1);
+            textview1.setText(""+podaci_iz_baze);
+
+        } catch (Exception e) {
+            Log.e("Error", "Error", e);
+        } finally {
+            if (myDB != null) myDB.close();
+        }
+    }
+
+
+
+    public void clickButton2(View view) {
+
+        EditText Edit1 = (EditText) findViewById(R.id.edit1);
+        EditText Edit2 = (EditText) findViewById(R.id.edit2);
+        EditText Edit3 = (EditText) findViewById(R.id.edit3);
+
+        try {
+            myDB = this.openOrCreateDatabase("knjiznica", MODE_PRIVATE, null);
+            myDB.execSQL("CREATE TABLE IF NOT EXISTS knjige (id INTEGER PRIMARY KEY AUTOINCREMENT, naslov VARCHAR(20),autor VARCHAR(20), broj_stranica INTEGER);");
+
+            String nasl = Edit1.getText().toString();
+            String auto =  Edit2.getText().toString();
+            Integer br = Integer.parseInt(Edit3.getText().toString());
+
+            myDB.execSQL("UPDATE knjige SET naslov= '"+ nasl +"' , autor='"+auto+"' , broj_stranica='"+br+"' WHERE id="+selID);
+
+            Cursor c = myDB.rawQuery("SELECT * FROM knjige", null);
+            podaci_iz_baze = "";
+            listItems.clear();
+            c.moveToFirst();
+            if (c != null) {
+                do {
+                    int id = c.getInt(c.getColumnIndex("id"));
+                    String nas = c.getString(c.getColumnIndex("naslov"));
+                    String aut = c.getString(c.getColumnIndex("autor"));
+                    int bro = c.getInt(c.getColumnIndex("broj_stranica"));
+                    podaci_iz_baze += id + " " + nas + " " + aut + " " + bro + "\n";
+                    listItems.add(""+id + " " + nas + " " + aut + " " + bro);
+                    adapter.notifyDataSetChanged();
+                } while (c.moveToNext());
+            }
+            TextView textview1 = (TextView) findViewById(R.id.textview1);
+            textview1.setText(""+podaci_iz_baze);
+
+        } catch (Exception e) {
+            Log.e("Error", "Error", e);
+        } finally {
+            if (myDB != null) myDB.close();
+        }
+    }
+
+
+
+    public void clickButton3(View view) {
+
+        TextView textview1 = (TextView) findViewById(R.id.textview1);
+        EditText Edit1 = (EditText) findViewById(R.id.edit1);
+        EditText Edit2 = (EditText) findViewById(R.id.edit2);
+        EditText Edit3 = (EditText) findViewById(R.id.edit3);
+
+            try {
+                myDB = this.openOrCreateDatabase("knjiznica", MODE_PRIVATE, null);
+                myDB.execSQL("CREATE TABLE IF NOT EXISTS knjige (id INTEGER PRIMARY KEY AUTOINCREMENT, naslov VARCHAR(20),autor VARCHAR(20), broj_stranica INTEGER);");
+
+                String nasl = Edit1.getText().toString();
+                String auto =  Edit2.getText().toString();
+                Integer br = Integer.parseInt(Edit3.getText().toString());
+
+                myDB.execSQL("DELETE FROM knjige WHERE id="+selID);
+                myDB.execSQL("UPDATE knjige SET naslov= '"+ nasl +"' , autor='"+auto+"' , broj_stranica='"+br+"' WHERE id="+selID);
+
+                Cursor c = myDB.rawQuery("SELECT * FROM knjige", null);
+                podaci_iz_baze = "";
+                listItems.clear();
+                c.moveToFirst();
+                if (c != null) {
+                    do {
+                        int id = c.getInt(c.getColumnIndex("id"));
+                        String nas = c.getString(c.getColumnIndex("naslov"));
+                        String aut = c.getString(c.getColumnIndex("autor"));
+                        int bro = c.getInt(c.getColumnIndex("broj_stranica"));
+                        podaci_iz_baze += id + " " + nas + " " + aut + " " + bro + "\n";
+                        listItems.add(""+id + " " + nas + " " + aut + " " + bro);
+                        adapter.notifyDataSetChanged();
+                    } while (c.moveToNext());
+                }
+                textview1.setText(""+podaci_iz_baze);
+
+            } catch (Exception e) {
+                Log.e("Error", "Error", e);
+            } finally {
+                if (myDB != null) myDB.close();
+            }
+    }
+
+}
+
+
+
+
+
+
+
+
+//////////////////////////xml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="167dp"
+        android:background="#c6ff00"
+        android:scrollbars="vertical"
+        android:transcriptMode="alwaysScroll" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="naslov:"
+        />
+
+    <EditText android:id="@+id/edit1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="autor:"
+        />
+
+    <EditText android:id="@+id/edit2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="broj stranica:"
+        />
+
+    <EditText android:id="@+id/edit3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal" android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#ffcc00"
+            android:onClick="clickButton"
+            android:text="U bazu"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#ffcc00"
+            android:onClick="clickButton2"
+            android:text="Promijeni"/>
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#ffcc00"
+            android:onClick="clickButton3"
+            android:text="Obriši"/>
+
+    </LinearLayout>
+
+</LinearLayout>
