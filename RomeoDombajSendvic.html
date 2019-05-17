@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>SendvièMejster</h1>
+
+Salama:  <input type="text" id="brSalama" value="Kolièina"> 1.5kn/k
+<br>
+
+Sir:<input type="text" id="brSir" value="Kolièina">1kn/k
+<br>
+
+Salata:<input type="text" id="brSalata" value="Kolièina">0.25kn/k
+<br>
+
+Luk:<input type="text" id="brLuk" value="Kolièina">0.25kn/k
+<br>
+
+Majoneza:<input type="text" id="brMajoneza" value="Kolièina">0.13kn/k
+<br>
+
+Keèap:<input type="text" id="brKeèap" value="Kolièina">0.13kn/k
+<br>
+
+Blagi umak:<input type="text" id="brBlagiUmak" value="Kolièina">0.33kn/k
+<br>
+
+Ljuti umak:<input type="text" id="brLjutiUmak" value="Kolièina">0.33kn/k
+<br>
+
+Jedno pecivo košta 2 kune.
+<br>
+
+<button onclick="ukupnaCijena()">UkupnaCijena</button>
+
+<div>
+
+<p id="cijena"> </p> kune za platiti.
+<br>
+
+<br>
+
+Vaš sendviè sastoji se od:
+<p id="proizvod1"> <p>
+
+</div>
+
+<script>
+function ukupnaCijena() {
+	var proizvod1 = parseInt(document.getElementById("brSalama").value, 10);
+    
+    if(document.getElementById("brSalama").value == 'Kolièina')
+    {
+    	proizvod1 = 0;
+    }
+    
+    var proizvod2 = parseInt(document.getElementById("brSir").value, 10);
+    
+        if(document.getElementById("brSir").value == 'Kolièina')
+    {
+    	proizvod2 = 0;
+    }
+    var proizvod3 = parseInt(document.getElementById("brSalata").value, 10);
+    
+        if(document.getElementById("brSalata").value == 'Kolièina')
+    {
+    	proizvod3 = 0;
+    }
+    var proizvod4 = parseInt(document.getElementById("brLuk").value, 10);
+    
+        if(document.getElementById("brLuk").value == 'Kolièina')
+    {
+    	proizvod4 = 0;
+    }
+    var proizvod5 = parseInt(document.getElementById("brMajoneza").value, 10);
+    
+        if(document.getElementById("brMajoneza").value == 'Kolièina')
+    {
+    	proizvod5 = 0;
+    }
+    var proizvod6 = parseInt(document.getElementById("brKeèap").value, 10);
+    
+        if(document.getElementById("brKeèap").value == 'Kolièina')
+    {
+    	proizvod6 = 0;
+    }
+    var proizvod7 = parseInt(document.getElementById("brBlagiUmak").value, 10);
+    
+        if(document.getElementById("brBlagiUmak").value == 'Kolièina')
+    {
+    	proizvod7 = 0;
+    }
+    var proizvod8 = parseInt(document.getElementById("brLjutiUmak").value, 10);
+    
+        if(document.getElementById("brLjutiUmak").value == 'Kolièina')
+    {
+    	proizvod8 = 0;
+    }
+	
+    
+    var konacnaCijena = ((proizvod1 * 1.5) + proizvod2 + (proizvod3 * 0.25) + (proizvod4 * 0.25) + (proizvod5 *0.13) + (proizvod6 * 0.33) + (proizvod7 * 0.33)+2)
+
+  document.getElementById("cijena").innerHTML = konacnaCijena;
+}
+</script>
+
+</body>
+</html>
