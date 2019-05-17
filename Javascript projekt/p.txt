@@ -1,0 +1,57 @@
+import processing.serial.*;
+PShape square;
+PShape square2;
+PShape square3;
+PShape square4;
+PShape square5;
+Serial myport;
+int var;
+void setup(){
+ size(512,512);
+ printArray(Serial.list());
+ myport=new Serial(this,"COM5",9600);
+ square = createShape(RECT, 206, 206, 50, 50);
+  square.setFill(color(255, 0, 0));
+  square.setStroke(true);
+  square2 = createShape(RECT, 156, 206, 50, 50);
+  square2.setFill(color(255, 0, 0));
+  square2.setStroke(true);
+  square3 = createShape(RECT, 106, 206, 50, 50);
+  square3.setFill(color(255, 0, 0));
+  square3.setStroke(true);
+  square4 = createShape(RECT, 256, 206, 50, 50);
+  square4.setFill(color(255, 0, 0));
+  square4.setStroke(true);
+    square5 = createShape(RECT, 306, 206, 50, 50);
+  square5.setFill(color(255, 0, 0));
+  square5.setStroke(true);
+}
+
+void draw(){
+    
+    shape(square, 25, 25);
+  
+  shape(square2, 25, 25);
+  shape(square3, 25, 25);
+  shape(square4, 25, 25);
+  
+  shape(square5, 25, 25);
+  boolean sredina=false;
+  
+ 
+  if(mousePressed && mouseX>205 && mouseX<307 && mouseY>205 && mouseY<307)
+    {
+      if(sredina==false)
+      {square.setFill(color(0,255,0));
+      sredina=true;
+      var=1;}
+      else
+      {
+        sredina=false;
+        square.setFill(color(255,0,0));
+      }
+    }
+    else
+    var=0;
+    myport.write(var);
+}
