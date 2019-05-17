@@ -1,0 +1,184 @@
+.container {
+  width: 65%;
+  height: 500px;
+  /* ako želimo okvir oko 
+  border: 2px solid silver;
+  */
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  padding: 50px;
+}
+
+.draggableList,
+.droppableList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.draggable {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  margin: 10px;
+  list-style: none;
+  display: inline-block;
+}
+
+.drapCircle {
+  width: 75px;
+  height: 75px;
+  border-radius: 50px;
+  border: 1px solid silver;
+  margin: 0 auto;
+}
+
+.dropable {
+  border: 2px solid white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  letter-spacing: 2px;
+  list-style: none;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.feedback {
+  width: 150px;
+  margin-left: 10px;
+  margin-right: 10px;
+  list-style: none;
+  display: inline-block;
+}
+
+.dropable header {
+
+}
+
+#draggableOne {
+  background: #2ecc71;
+}
+
+#draggableTwo {
+  background: #3498db;
+}
+
+#draggableThree {
+  background: #9b59b6;
+}
+
+#draggableFour {
+  background: #e67e22;
+}
+
+.message {
+  color: green;
+  transition: 2s;
+}
+
+.colorChange {
+  background: #9b59b6;
+  color: #9b59b6;
+  border: 2px solid #9b59b6;
+  transition: 2s;
+}
+
+.colorChangeGreen {
+  background: #2ecc71;
+  color: #2ecc71;
+  border: 2px solid #2ecc71;
+  transition: 2s;
+}
+
+.colorChangeBlue {
+  background: #3498db;
+  color: #3498db;
+  border: 2px solid #3498db;
+  transition: 2s;
+}
+
+.colorChangeOrange {
+  background: #e67e22;
+  color: #e67e22;
+  border: 2px solid #e67e22;
+  transition: 2s;
+}
+
+.bounce {
+  animation-name: bounce;
+  -webkit-animation-name: bounce;
+  animation-duration: 1.6s;
+  -webkit-animation-duration: 1.6s;
+  animation-timing-function: ease;
+  -webkit-animation-timing-function: ease;
+  transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -webkit-transform-origin: 50% 100%;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0%) scaleY(0.6);
+  }
+  60% {
+    transform: translateY(-100%) scaleY(1.1);
+  }
+  70% {
+    transform: translateY(0%) scaleY(0.95) scaleX(1.05);
+  }
+  80% {
+    transform: translateY(0%) scaleY(1.05) scaleX(1);
+  }
+  90% {
+    transform: translateY(0%) scaleY(0.95) scaleX(1);
+  }
+  100% {
+    transform: translateY(0%) scaleY(1) scaleX(1);
+  }
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0%) scaleY(0.6);
+  }
+  60% {
+    -webkit-transform: translateY(-100%) scaleY(1.1);
+  }
+  70% {
+    -webkit-transform: translateY(0%) scaleY(0.95) scaleX(1.05);
+  }
+  80% {
+    -webkit-transform: translateY(0%) scaleY(1.05) scaleX(1);
+  }
+  90% {
+    -webkit-transform: translateY(0%) scaleY(0.95) scaleX(1);
+  }
+  100% {
+    -webkit-transform: translateY(0%) scaleY(1) scaleX(1);
+  }
+}
+
+.disappear {
+  display: none;
+}
+
+.bazang {
+  color: pink;
+  font-size: 6em;
+}
+
+.out-of-stock {
+  display: none;
+  width: 100%;
+  text-align: center;
+  color: #666;
+  font-size: 24px;
+  line-height: 36px;
+}

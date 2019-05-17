@@ -1,0 +1,257 @@
+.container {
+  width: 900px;
+  height: 600px;
+  border-radius: -2px;
+  position: relative;
+}
+
+html, body, #main {  
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  margin: 0px;  
+}
+
+/* Cloud1 with shadow */
+.cloud1 {
+  position: absolute;
+  width: 270px;
+  height: 250px;
+  left: 320px;
+  visibility: hidden;
+}
+
+.cloud_1{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#circle1 {
+  width: 90px;	height: 90px;	background: #FFFFFF;	border-radius: 50px;
+  position: absolute;
+  top: 55px; left: 70px;
+}
+#circle2 {
+  width: 100px;	height: 100px;	background: #FFFFFF;	border-radius: 50px;
+  position: absolute;
+  top: 100px; left: 0px;
+}
+#circle3 {
+  width: 65px;	height: 60px;	background: #FFFFFF;	border-radius: 50px;
+  position: absolute;
+  top: 93px; left: 148px;
+}
+#circle4 {
+  width: 80px;	height: 80px;	background: #FFFFFF;	border-radius: 50px;
+  position: absolute;
+  top: 120px; left: 190px;
+}
+#rect {
+  width: 185px;	height: 72px;	background: #FFFFFF;	border-radius: 0px;
+  position: absolute;
+  top: 128px; left: 45px;
+}
+#circle1Shadow {
+  width: 90px;	height: 90px;	background: #000000;	border-radius: 50px;
+  position: absolute;
+  top: 62px; left: 77px;
+}
+#circle2Shadow {
+  width: 100px;	height: 100px;	background: #000000;	border-radius: 50px;
+  position: absolute;
+  top: 107px; left: 7px;
+}
+#circle3Shadow {
+  width: 65px;	height: 60px;	background: #000000;	border-radius: 50px;
+  position: absolute;
+  top: 100px; left: 155px;
+}
+#circle4Shadow {
+  width: 80px;	height: 80px;	background: #000000;	border-radius: 50px;
+  position: absolute;
+  top: 127px; left: 197px;
+}
+#rectShadow {
+  width: 185px;	height: 72px;	background: #000000;	border-radius: 0px;
+  position: absolute;
+  top: 135px; left: 52px;
+}
+
+#cloud1Shadow {
+  opacity: 0.33;
+}
+
+#text1 {
+  position:absolute;
+  top: 60%;
+  left: 50%;
+  margin: 0px auto;
+  transform: translate(-50%, -50%);
+  font: 20pt verdana;
+  color: #0083ca;
+}
+
+
+/* Cloud2 with shadow */
+.cloud2 {
+  position: absolute;
+  width: 235px;
+  height: 250px;
+  left: 325px;
+  visibility: hidden;
+}
+
+.cloud_2{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#circle1_2 {
+  width: 81px;	height: 81px;	background: #FFFFFF;	border-radius: 50px;
+  position: absolute;
+  top: 61px; left: 95px;
+}
+#circle2_2 {
+  width: 90px;	height: 90px;	background: #FFFFFF;	border-radius: 50px;
+  position: absolute;
+  top: 102px; left: 148px;  
+}
+#circle3_2 {
+  width: 58.5px;	height: 54px;	background: #FFFFFF;	border-radius: 50px;
+  position: absolute;
+  top: 93px; left: 47px;
+}
+#circle4_2 {
+  width: 72px;	height: 72px;	background: #FFFFFF;	border-radius: 50px; 
+  position: absolute;
+  top: 120px; left: 0px;
+}
+#rect_2 {
+  width: 163px;	height: 64.8px;	background: #FFFFFF;	border-radius: 0px;
+  position: absolute;
+  top: 127px; left: 32px;
+}
+#circle1Shadow_2 {
+  width: 81px;	height: 81px;	background: #000000;	border-radius: 50px;
+  position: absolute;
+  top: 67px; left: 102px;
+}
+#circle2Shadow_2 {
+  width: 90px;	height: 90px;	background: #000000;	border-radius: 50px;
+  position: absolute;
+  top: 109px; left: 155px;
+}
+#circle3Shadow_2 {
+  width: 58.5px;	height: 54px;	background: #000000;	border-radius: 50px;
+  position: absolute;
+  top: 100px; left: 54px;
+}
+#circle4Shadow_2 {
+  width: 72px;	height: 72px;	background: #000000;	border-radius: 50px;
+  position: absolute;
+  top: 127px; left: 7px;
+}
+#rectShadow_2 {
+  width: 163px;	height: 64.8px;	background: #000000;	border-radius: 0px;
+  position: absolute;
+  top: 134px; left: 39px;
+}
+
+#cloud2Shadow {
+  opacity: 0.33;
+}
+
+#text2 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin: 0px auto;
+  transform: translate(-50%, -50%);
+  font: 20pt verdana;
+  color: #0083ca;
+}
+
+#input1 {
+  position: absolute;
+  transform: translate(-152px, -54px);
+  font: 14pt verdana;
+  visibility: hidden;
+}
+
+#button1 {
+  position: absolute;
+  transform: translate(54px, -58px);
+  visibility: hidden;
+}
+
+#score {
+  position: absolute;
+  transform: translate(680px, -590px);
+  font: 20pt verdana;
+  color: #0074b3;
+  visibility: hidden;
+}
+
+
+/*-----CSS heart-----*/
+#heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    visibility: hidden;
+}
+#heart:before,
+#heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: #0074b3;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+#heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+/*-----CSS heart-----*/
+
+#button2 {
+  position: absolute;
+  transform: translate(-97px, -158px);
+  visibility: visible;
+}
+
+#gameOver {
+  position: absolute;
+  transform: translate(155px, -670px);
+  visibility: hidden;
+  font: 30pt verdana;
+  color: #0074b3;
+}
+
