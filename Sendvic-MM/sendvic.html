@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<title>Sendvic</title>
+<meta charset="UTF-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sans-Serif">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Sans-Serif", sans-serif}
+.w3-quarter img{margin-bottom: -6px; cursor: pointer}
+.w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
+</style>
+<body class="w3-light-grey">
+
+<!-- Sidebar/menu -->
+
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-red w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">Odaberi sendviè</span>
+
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+  
+  <!-- Photo grid -->
+  <div class="w3-row ">
+    <div class="w3-half">
+     <p class="w3-blue w3-large"> 20kn</p><img src="burger.png" style="width:50%" onclick="onClick(this)" alt="Hamburger"><input type="text" id="hamBR" value="0">
+        <p class="w3-blue w3-large"> 2kn</p><img src="kecup.png" style="width:50%" onclick="onClick(this)" alt="Keèap, 5g"><input type="text" id="kecBR" value="0">
+      <p class="w3-blue w3-large"> 5kn</p><img src="bacon.png" style="width:50%" onclick="onClick(this)" alt="Slanina, 2 lista"><input type="text" id="bacBR" value="0">
+   </div>
+    
+   <div class="w3-half">
+      <p class="w3-blue w3-large"> 25kn</p><img src="chickenburger.png" style="width:50%"  alt="Chickenburger"><input type="text" id="chknBR" value="0">
+     <p class="w3-blue w3-large"> 2kn</p><img src="mustard.jpg" style="width:50%"  alt="Senf, 3g"><input type="text" id="mstBR" value="0">
+      <p class="w3-blue w3-large"> 4kn</p><img src="tomato.png" style="width:50%"  alt="Rajèica, 1 komad"><input type="text" id="tmtBR" value="0">
+    </div>
+	
+    
+   
+  </div>
+  <button onclick="ukupnaCijena()">Izraèunaj</button>
+  <p class="w3-red w3-xlarge"> Ukupna cijena u kunama: </p>
+  <p class="w3-yellow w3-xlarge"id="cijena"> </p>
+
+ 
+  
+  
+
+
+<!-- End page content -->
+</div>
+
+<script>
+function ukupnaCijena() {
+var proizvod1 = parseInt(document.getElementById("hamBR").value, 10);
+    
+    if(document.getElementById("hamBR").value == '0')
+    {
+    	proizvod1 = 0;
+    }
+    
+    var proizvod2 = parseInt(document.getElementById("kecBR").value, 10);
+    
+        if(document.getElementById("kecBR").value == '0')
+    {
+    	proizvod2 = 0;
+    }
+    var proizvod3 = parseInt(document.getElementById("bacBR").value, 10);
+    
+        if(document.getElementById("bacBR").value == '0')
+    {
+    	proizvod3 = 0;
+    }
+    var proizvod4 = parseInt(document.getElementById("chknBR").value, 10);
+    
+        if(document.getElementById("chknBR").value == '0')
+    {
+    	proizvod4 = 0;
+    }
+	 var proizvod5 = parseInt(document.getElementById("mstBR").value, 10);
+    
+        if(document.getElementById("mstBR").value == '0')
+    {
+    	proizvod5 = 0;
+    }
+    var proizvod6 = parseInt(document.getElementById("tmtBR").value, 10);
+    
+        if(document.getElementById("tmtBR").value == '0')
+    {
+    	proizvod6 = 0;
+    }
+    var cijena = ((proizvod1 * 20) + (proizvod2*2) + (proizvod3 * 5) + (proizvod4 * 25) + (proizvod5 *2) + (proizvod6 * 4))
+
+  document.getElementById("cijena").innerHTML = cijena;
+}
+</script>
+
+
+</body>
+</html>
