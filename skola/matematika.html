@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<title>Edukacija</title>
+<meta charset="UTF-12">
+<link rel="stylesheet" href="css/mat.css">
+<script src="js/mat.js"></script>
+<div class="container ">
+  <!--<button id="btn-test" class="btn btn-default">run test</button>-->
+  <h1>Nauèi brojati <br /><small>jednostavna matematièka igrica</small></h1>
+  <div class="row form-inline text-center well">
+    <input type="number" id="number1" class="input-lg col-xs-2 col-xs-offset-1 text-center" readonly/>
+    <div id="sign" class="col-xs-2 large">+</div>
+    <input type="number" id="number2" class="input-lg col-xs-2 text-center" readonly/>
+    <div class="col-xs-2 large">=</div>
+    <input type="number" id="answer" class="input-lg col-xs-2 text-center"/>
+  </div>
+  
+  <div id="info" class="alert alert-info">Solve the expression, type the answer and press ENTER to check the result.</div>
+  <div id="success" class="hidden alert alert-success">Correct!</div>
+  <div id="error" class="hidden alert alert-danger">Wrong answer :(</div>
+</div>
+</html>
