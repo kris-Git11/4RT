@@ -1,0 +1,16 @@
+<?php
+
+/* pokušaj ispisa profila iz hotspot
+*/
+
+require('../hotspot/routeros_api.class.php');
+$API = new RouterosAPI();
+
+if ($API->connect('192.168.56.101', 'admin', '')) {
+
+   #show me what you got
+   $API->write('/ip/hotspot/user/profile/print');
+   $ips = $API->read();
+   var_dump($ips);
+   $API->disconnect();
+}
